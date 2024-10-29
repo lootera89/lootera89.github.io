@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'Edit Undo BRK';
+	src: url(/assets/fonts/EditUndoBRK.woff2) format('woff2'),
+	url(/assets/fonts/EditUndoBRK.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

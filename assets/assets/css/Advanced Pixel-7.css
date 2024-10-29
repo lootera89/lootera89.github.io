@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'Advanced Pixel-7';
+	src: url(/assets/fonts/Advanced_Pixel-7.woff2) format('woff2'),
+	url(/assets/fonts/Advanced_Pixel-7.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
