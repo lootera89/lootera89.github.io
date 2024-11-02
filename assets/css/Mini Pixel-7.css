@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'Mini Pixel-7';
-	src: url(../../assets/fonts/MiniPixel-7.woff2) format('woff2'),
-	url(../../assets/fonts/MiniPixel-7.woff) format('woff');
+	src: url(/assets/fonts/MiniPixel-7.woff2) format('woff2'),
+	url(/assets/fonts/MiniPixel-7.woff) format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
