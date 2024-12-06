@@ -7,6 +7,7 @@
 <meta name="theme-color" content="#ffffff">
 </head><body style="background: linear-gradient(rgba(67,67,67,0.36) 0%, rgba(0,0,0,0.94) 100%), url(&quot;/assets/img/magicpattern-f8sDFh-So88-unsplash.jpg&quot;) bottom / contain, rgb(0,0,0);font-weight: bold;backdrop-filter: blur(0px) brightness(20%) contrast(83%) invert(0%) saturate(58%) sepia(0%);-webkit-backdrop-filter: blur(0px) brightness(20%) contrast(83%) invert(0%) saturate(58%) sepia(0%);"><nav class="navbar navbar-dark navbar-expand-md sticky-top py-3" style="background: rgb(18,18,18);" id="mainNav"><div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navcol-1"><ul class="navbar-nav mx-auto"><li class="nav-item"><a class="nav-link fw-normal" href="/index.html">About</a></li><li class="nav-item fw-normal"><a class="nav-link fw-normal active" href="/Projects.html">Projects</a></li><li class="nav-item"><a class="nav-link fw-normal" href="/Contact.html">Contact</a></li></ul></div></div></nav><!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,40 +19,53 @@
       left: 50%;
       transform: translateX(-50%);
       height: 100%;
-      width: var(--rectangle-width, 1500px); /* Customize width using CSS variable */
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(24, 24, 24, 0.5)); /* Transparent grey to black gradient */
-      z-index: -1; /* Keeps it behind other elements */
-      pointer-events: none; /* Ensures it doesn't interfere with user interaction */
+      width: var(--rectangle-width, 1500px);
+      /* Customize width using CSS variable */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.623), rgba(24, 24, 24, 0.5));
+      /* Transparent grey to black gradient */
+      z-index: -1;
+      /* Keeps it behind other elements */
+      pointer-events: none;
+      /* Ensures it doesn't interfere with user interaction */
+    }
+
+    @media (max-width: 768px) {
+      .background-rectangle {
+        display: none;
+        /* Hides the rectangle on mobile */
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="background-rectangle"></div>
 </body>
-</html>
-<section><div class="col-md-8 col-xl-6 text-center mx-auto" style="margin-bottom: -35px;margin-top: 50px;"><h2 class="display-1" style="font-family: 'Edit Undo BRK';color: rgb(255,255,255);font-size: 40PX;padding-bottom: 21px;">My Projects</h2></div><div class="container-fluid my-5 p-4"
+
+</html><section><div class="col-md-8 col-xl-6 text-center mx-auto" style="margin-bottom: -35px;margin-top: 50px;"><h2 class="display-1" style="font-family: 'Edit Undo BRK';color: rgb(255,255,255);font-size: 40PX;padding-bottom: 21px;">My Projects</h2></div><div class="container-fluid my-5 p-4"
     style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
-    
     <!-- Rotated Text -->
     <div class="rotated-text">6 MONTHS</div>
-    
+
     <div class="row">
         <!-- Left Side: Embedded YouTube Video -->
-        <div class="col-lg-8 col-md-6 d-flex align-items-stretch">
+        <div class="col-lg-8 col-md-6 col-sm-12 d-flex align-items-stretch mb-4 mb-md-0">
             <div class="portfolio-video"
                 style="position: relative;height: 100%;width: 100%;border-radius: 8px;overflow: hidden;box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);">
                 <div id="thumbnailOverlay-card1"
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-image: url('https://img.youtube.com/vi/A61d7wnLFHs/maxresdefault.jpg'); background-size: cover; cursor: pointer;">
-                    <img src="/assets/img/play-video-1.png" alt="Play" style="width: 60px;height: 60px;">
+                    <img src="/assets/img/play-video-1.png" alt="Play" style="width: 80px;height: 80px;">
                 </div>
-                <iframe id="video-card1" width="100%" height="100%" src="https://www.youtube.com/embed/A61d7wnLFHs?enablejsapi=1"
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                <iframe id="video-card1" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/A61d7wnLFHs?enablejsapi=1" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen style="border-radius: 8px;display: none;"></iframe>
             </div>
         </div>
-        
+
         <!-- Right Side: Text and Details -->
-        <div class="col-lg-4 col-md-6 d-flex flex-column justify-content-center text-white" style="font-size: 16px;">
+        <div class="col-lg-4 col-md-6 col-sm-12 text-white">
             <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700;">Rgames - Fabwelt
                 Studio</h2>
             <div class="tags mb-3">
@@ -59,492 +73,357 @@
                     style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Unreal
                     Engine</span>
                 <span class="badge"
-                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Game
-                    Development</span>
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Full
+                    Stack Development</span>
+                <span class="badge"
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">AA
+                    Project</span>
             </div>
-            <!-- Scrollable Middle Paragraph -->
             <div class="scrollable-paragraph"
                 style="max-height: 120px; overflow-y: auto; line-height: 1.6; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 1em;">
                 <p>
-                    In April 2023, I joined <strong>Fabwelt Studios</strong> to develop a racing game as their first
-                    Unreal Engine developer. Known for blockchain FPS games like <em>Arsenal</em>, Fabwelt aimed to
-                    expand into different genres. The project involved creating an AAA-level racing game MVP to help
-                    secure funding.
+                    I was hired by Fabwelt Studios in April 2023 to be their first Unreal Engine developer on a racing
+                    game project. Fabwelt is known for its blockchain FPS games, such as Arsenal. The project was set to
+                    create an MVP AA level racing game to attract funding for further development.
                 </p>
                 <p>
-                    For six months, I worked solo, tackling challenges in AI, realistic car physics, and UI elements to
-                    bring this game to life. From dynamic car AI to advanced motion blur, the game was designed for
-                    realistic, immersive experiences even on low-end PCs.
+                    I worked independently on this project for six months, overcoming challenges that ranged from AI,
+                    car physics, UI design, to bringing a game to life. Everything is dynamic from car AI, advanced
+                    motion blur implementations up to being realistic while allowing an immersive experience fully
+                    optimized for low-end PCs.
                 </p>
             </div>
-
-
-
-
-            <!-- Bullet Points -->
-            <ul
-                style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: .5em;">
-                <li>Developed Reinforcement Learning AI with PPO algorithm for opponent cars.</li>
-                <li>Advanced minimap, speedometer & UI/UX</li>
-                <li>Custom motion blur and visual effects</li>
-                <li>Realistic car physics and car controls</li>
-                <li>Niagra, Level streaming, World design, etc. </li>
+            <ul style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400;">
+                <li>Reinforcement Learning AI with PPO for opponent cars</li>
+                <li>Advanced minimap, speedometer, and UI/UX</li>
+                <li>Custom motion blur and other visual effects</li>
+                <li>Realistic car physics and controls</li>
+                <li>World design, level streaming, and Niagara effects</li>
             </ul>
-
-            <!-- Highlighted Link for Certificate Download -->
-            <p class="mt-2"
-                style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; margin-bottom: -0.5em">
-                <a href="/assets/img/Employee-Experience-Certificate-Maan.S_page-0001.jpg" class="btn experience-btn"
-                    style="font-family: 'Poppins', sans-serif !important; font-size: 14px; background: linear-gradient(90deg, #4CAF50, #087F23); color: #fff; padding: 0 10px; border-radius: 4px; text-decoration: none; border: none; display: inline-block;">
-                    Download Work Experience Certificate
-                </a>
-            </p>
-
-            <!-- Download Button -->
-            <div class="mt-3">
-                <a href="https://r-games.tech/" class="btn download-btn"
-                    style="font-family: 'Poppins', sans-serif !important; font-size: 14px; background: linear-gradient(90deg, #6A7FDB, #3A4CA3); color: #fff; padding: 0 10px; border-radius: 2px; text-decoration: none; border: none; display: inline-block;">
-                    Download Rgames
-                </a>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- Section for Development Images -->
-    <div class="row mt-4 d-none d-lg-flex">
-        <div class="col-3">
-            <div class="dev-image-container" data-toggle="modal" data-target="#imageModal1">
-                <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_18_42%20AM.png" class="img-fluid dev-image"
-                    alt="Development Image 1">
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="dev-image-container" data-toggle="modal" data-target="#imageModal2">
-                <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_17_29%20AM.png" class="img-fluid dev-image"
-                    alt="Development Image 2">
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="dev-image-container" data-toggle="modal" data-target="#imageModal3">
-                <img src="/assets/img/HighresScreenshot00003.png" class="img-fluid dev-image" alt="Development Image 3">
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="dev-image-container" data-toggle="modal" data-target="#imageModal4">
-                <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_15_19%20AM.png" class="img-fluid dev-image"
-                    alt="Development Image 4">
-            </div>
+            <a href="/assets/img/Employee-Experience-Certificate-Maan.S_page-0001.jpg" class="btn"
+                style="background: linear-gradient(90deg, #6A7FDB, #3A4CA3); color: #fff; padding: 5px 10px; border-radius: 2px; text-decoration: none; font-family: 'Poppins', sans-serif;">Download
+                Work Experience Certificate</a>
+            <a href="https://r-games.tech/" class="btn mt-3"
+                style="background: linear-gradient(90deg, #4CAF50, #087F23); color: #fff; padding: 5px 10px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif;">Download
+                Rgames</a>
         </div>
     </div>
 
-    <!-- CSS for Fixed 16:9 Aspect Ratio Container -->
+    <!-- Development Images -->
+    <div class="row mt-4">
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_18_42%20AM.png" class="img-fluid dev-image full-scale-image"
+                alt="Dev Image 1">
+        </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/HighresScreenshot000010.png" class="img-fluid dev-image full-scale-image" alt="Dev Image 2">
+        </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_15_19%20AM.png" class="img-fluid dev-image full-scale-image"
+                alt="Dev Image 3">
+        </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/HighresScreenshot1.png" class="img-fluid dev-image full-scale-image" alt="Dev Image 4">
+        </div>
+    </div>
+
+
+
+
     <style>
-        .dev-image-container {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            /* 16:9 Aspect Ratio */
-            overflow: hidden;
-            border-radius: 8px;
-            /* Optional: for rounded corners */
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-            /* Optional: for shadow */
+        .portfolio-video {
+            aspect-ratio: 16 / 9;
         }
 
-        .dev-image-container img {
+        /* Importing Pixelify Sans Font */
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+        /* Rotated Text with Pixelify Sans */
+        .rotated-text {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            top: 50%;
+            left: -100px;
+            transform: translateY(-50%) rotate(-90deg);
+            background-color: black;
+            color: white;
+            padding: 5px 15px;
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+            font-size: 29px;
+            letter-spacing: 2px;
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        /* Mobile Adjustments for "6 Months" text */
+        @media (max-width: 768px) {
+            .rotated-text {
+                top: -25px;
+                left: 10px;
+                transform: rotate(0deg);
+                padding: 5px 10px;
+                font-size: 19px;
+            }
+        }
+
+        .full-scale-image {
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .full-scale-image:hover {
+            transform: scale(1.05);
         }
     </style>
-
-    <!-- Modal Structure for Images -->
-    <div class="modal fade" id="imageModal1" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel1"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content" style="background-color: #121212;border: none;">
-                <div class="modal-body">
-                    <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_18_42%20AM.png" class="img-fluid"
-                        alt="Development Image 1" style="border-radius: 8px;width: 100%;height: auto;">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="imageModal2" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel2"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content" style="background-color: #121212;border: none;">
-                <div class="modal-body">
-                    <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_17_29%20AM.png" class="img-fluid"
-                        alt="Development Image 2" style="border-radius: 8px;width: 100%;height: auto;">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="imageModal3" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel3"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content" style="background-color: #121212;border: none;">
-                <div class="modal-body">
-                    <img src="/assets/img/HighresScreenshot00003.png" class="img-fluid" alt="Development Image 3"
-                        style="border-radius: 8px;width: 100%;height: auto;">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="imageModal4" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel4"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content" style="background-color: #121212;border: none;">
-                <div class="modal-body">
-                    <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_15_19%20AM.png" class="img-fluid"
-                        alt="Development Image 4" style="border-radius: 8px;width: 100%;height: auto;">
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
-<!-- Bootstrap and jQuery JS (Add Bootstrap JS and jQuery for modal functionality) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- CSS for Scrollable Middle Paragraph -->
-<style>
-    /* Custom Scrollbar for the Middle Paragraph */
-    .scrollable-paragraph::-webkit-scrollbar {
-        width: 8px;
-    }
 
-    .scrollable-paragraph::-webkit-scrollbar-thumb {
-        background-color: #555;
-        border-radius: 4px;
-    }
 
-    .scrollable-paragraph {
-        scrollbar-width: thin;
-        scrollbar-color: #555 #121212;
-    }
-
-    /* Styles for Development Images */
-    .dev-image {
-        border-radius: 8px;
-        cursor: pointer;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        transition: transform 0.2s;
-        /* Animation on hover */
-    }
-
-    .dev-image:hover {
-        transform: scale(1.05);
-        /* Slight zoom on hover */
-    }
-</style>
-</div>
-
-<!-- CSS -->
-<style>
-    /* Importing Pixelify Sans Font */
-    @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
-
-    /* Rotated Text with Pixelify Sans */
-    .rotated-text {
-        position: absolute;
-        top: 50%;
-        left: -100px;
-        transform: translateY(-50%) rotate(-90deg);
-        background-color: black;
-        color: white;
-        padding: 5px 15px;
-        font-family: 'Pixelify Sans', sans-serif;
-        font-weight: bold;
-        font-size: 29px;
-        letter-spacing: 2px;
-        white-space: nowrap;
-        z-index: 10;
-    }
-
-    /* Mobile Adjustments for "6 Months" text */
-    @media (max-width: 768px) {
-        .rotated-text {
-            top: -25px;
-            left: 10px;
-            transform: rotate(0deg);
-            padding: 5px 10px;
-            font-size: 19px;
-        }
-    }
-
-    /* Video Container Responsiveness */
-    .portfolio-video {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16/9;
-    }
-
-    iframe {
-        width: 100%;
-        height: 100%;
-    }
-</style>
-
-<!-- JavaScript for Playing the Video -->
 <script>
-    // JavaScript to handle play button click for the video
     document.getElementById("thumbnailOverlay-card1").addEventListener("click", function () {
-        // Hide the thumbnail overlay
-        document.getElementById("thumbnailOverlay-card1").style.display = "none";
-        
-        // Show the video iframe and play it
+        this.style.display = "none";
         const video = document.getElementById("video-card1");
         video.style.display = "block";
         video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     });
+
+    document.querySelectorAll('.full-scale-image').forEach(image => {
+        image.addEventListener('click', () => {
+            window.open(image.src, '_blank').focus(); // Opens the image in a new tab or window
+        });
+    });
+
 </script><div class="container-fluid my-5 p-4"
-    style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;">
+    style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
+    <!-- Rotated Text -->
+    <div class="rotated-text">8 MONTHS</div>
+
     <div class="row">
-        <!-- Left Side: Embedded YouTube Video with Styled Container -->
+        <!-- Left Side: Embedded YouTube Video -->
         <div class="col-lg-8 col-md-6 d-flex align-items-stretch">
-            <!-- Video Container with Custom Play Button and Overlay Thumbnail -->
             <div class="portfolio-video"
                 style="position: relative;height: 100%;width: 100%;border-radius: 8px;overflow: hidden;box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);">
-                <!-- Thumbnail overlay with play button -->
                 <div id="thumbnailOverlay-card2"
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-image: url('https://img.youtube.com/vi/A61d7wnLFHs/maxresdefault.jpg'); background-size: cover; cursor: pointer;">
-                    <img src="/assets/img/play-video-1.png" alt="Play" style="width: 60px;height: 60px;">
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-image: url('https://img.youtube.com/vi/qtbsLCBDKK4/maxresdefault.jpg'); background-size: cover; cursor: pointer;">
+                    <img src="/assets/img/play-video-1.png" alt="Play" style="width: 80px;height: 80px;">
                 </div>
-
-                <!-- YouTube iFrame video player -->
                 <iframe id="video-card2" width="100%" height="100%"
-                    src="https://www.youtube.com/embed/A61d7wnLFHs?enablejsapi=1" title="YouTube video player"
+                    src="https://www.youtube.com/embed/qtbsLCBDKK4?enablejsapi=1" title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen style="border-radius: 8px;display: none;"></iframe>
             </div>
-
-            <script>
-                // JavaScript to handle play button click for the specific card
-                document.getElementById("thumbnailOverlay-card2").addEventListener("click", function () {
-                    // Hide the thumbnail overlay
-                    document.getElementById("thumbnailOverlay-card2").style.display = "none";
-
-                    // Show the video iframe and play with sound
-                    const video = document.getElementById("video-card2");
-                    video.style.display = "block";
-                    video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
-                });
-            </script>
-
         </div>
 
         <!-- Right Side: Text and Details -->
-        <div class="col-lg-4 col-md-6 d-flex flex-column justify-content-center text-white" style="font-size: 16px;">
-            <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700;">Pixel Punch
-                Revolution</h2>
+        <div class="col-lg-4 col-md-6 text-white" style="font-size: 16px;">
+            <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700;">Demono: Home Alone -
+                Lootera89</h2>
             <div class="tags mb-3">
                 <span class="badge"
-                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">
-                    Unreal Engine
-                </span>
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Horror
+                    Game</span>
                 <span class="badge"
-                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">
-                    Game Development
-                </span>
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Atmospheric
+                    Design</span>
                 <span class="badge"
-                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">
-                    Indie Game
-                </span>
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Solo
+                    Development</span>
             </div>
-
-            <!-- Scrollable Middle Paragraph -->
-            <!-- Scrollable Middle Paragraph -->
             <div class="scrollable-paragraph"
                 style="max-height: 120px; overflow-y: auto; line-height: 1.6; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 1em;">
                 <p>
-                    I began developing <strong>Pixel Punch Revolution</strong> in April 2023. It’s a fast-paced beat 'em
-                    up arcade game inspired by titles like Deep.io and Brotato. Players experience exponential growth,
-                    facing tougher enemies as they advance through five uniquely themed maps, each ending with a boss.
+                    Demono: Home Alone is a short, story driven horror game I developed solo, starting in April 2024 on
+                    Unreal Engine 5. The story was written by two friends and voiced by a professional artist, I handled
+                    all aspects of the game's design and development.
                 </p>
                 <p>
-                    To enhance the game’s impact, I implemented custom body dismemberment, 2D blood particles, dynamic
-                    health bars, and damage pop-up effects for a dynamic "Game Feel." Currently, I’m handling character
-                    art, working with an artist for backgrounds, and refining enemy types, bosses, and mobile controls.
+                    This game focuses on creating an immersive atmosphere using custom PSX-style dithering effects and
+                    layered sound design. Despite its detailed visuals and interactive elements, the game is highly
+                    optimized with a final size of just 400 MB.
                 </p>
             </div>
-
-            <!-- Bullet Points -->
             <ul
-                style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 3em;">
-                <li>Used machine learning algorithms, such as Learning Agent and PPO, for advanced enemy AI.</li>
-                <li>Optimized for mobile controls</li>
-                <li>Custom dismemberment system and 2D blood effects</li>
-                <li>health bars and damage indicators</li>
-                <li>Unique boss battles and enemy variations</li>
+                style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: -0.35em;">
+                <li>Custom dithering post-process material for PSX aesthetics</li>
+                <li>Many player to world interactive elements</li>
+                <li>Layered sound design for an immersive atmosphere</li>
+                <li>Level streaming for seamless gameplay</li>
+                <li>Highly optimized to a 400 MB final size</li>
             </ul>
-
-
-
-            <!-- Highlighted Link for Project Info 
-            <p class="mt-2"
-                style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600; margin-bottom: 2em;">
-                <a href="your-download-link-here" class="btn experience-btn"
-                    style="font-family: 'Poppins', sans-serif !important; font-size: 14px; background: linear-gradient(90deg, #4CAF50, #087F23); color: #fff; padding: 0 10px; border-radius: 4px; text-decoration: none; border: none; display: inline-block;">
-                    Download Pixel Punch Revolution
-                </a>
-            </p> -->
-
-
+            <a href="https://lootera89.itch.io/demono-home-alone" class="btn mt-3"
+                style="background: linear-gradient(90deg, #4CAF50, #087F23); color: #fff; padding: 5px 10px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif; margin-bottom: 2em;">Download
+                Demono: Home Alone</a>
         </div>
+
 
     </div>
 
-
-    <!-- Section for Development Images -->
-    <div class="row mt-4 d-none d-lg-flex">
-        <div class="col-3">
-            <div class="dev-image-container" data-toggle="modal" data-target="#imageModal1">
-                <img src="/assets/img/NewShit%20(64-bit%20Development%20PCD3D_ES31)%20%2029-09-2023%2003_44_27%20PM.png"
-                    class="img-fluid dev-image" alt="Development Image 1">
-            </div>
+    <!-- Development Images -->
+    <div class="row mt-4">
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/screenshots/demono/gif4.gif" class="img-fluid dev-image full-scale-image" alt="Dev Image 1">
         </div>
-        <div class="col-3">
-            <div class="dev-image-container" data-toggle="modal" data-target="#imageModal2">
-                <img src="/assets/img/NewShit%20-%20Unreal%20Editor%2029-09-2023%2003_48_29%20PM.png" class="img-fluid dev-image"
-                    alt="Development Image 2">
-            </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/screenshots/demono/PP_Dithering%2006-12-2024%2007_00_18%20AM.png"
+                class="img-fluid dev-image full-scale-image" alt="Dev Image 2">
         </div>
-        <div class="col-3">
-            <div class="dev-image-container" data-toggle="modal" data-target="#imageModal3">
-                <img src="/assets/img/NewShit%20-%20Unreal%20Editor%2029-09-2023%2003_40_50%20PM.png" class="img-fluid dev-image"
-                    alt="Development Image 3">
-            </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/screenshots/demono/HighresScreenshot00024.png" class="img-fluid dev-image full-scale-image"
+                alt="Dev Image 3">
         </div>
-        <div class="col-3">
-            <div class="dev-image-container" data-toggle="modal" data-target="#imageModal4">
-                <img src="/assets/img/NewShit%20-%20Unreal%20Editor%2029-09-2023%2003_36_46%20PM.png" class="img-fluid dev-image"
-                    alt="Development Image 4">
-            </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/screenshots/demono/HighresScreenshot00022.png" class="img-fluid dev-image full-scale-image"
+                alt="Dev Image 4">
         </div>
     </div>
 
-    <!-- CSS for Fixed 16:9 Aspect Ratio Container -->
+
     <style>
-        .dev-image-container {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            /* 16:9 Aspect Ratio */
-            overflow: hidden;
+        .dev-image {
             border-radius: 8px;
-            /* Optional: for rounded corners */
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-            /* Optional: for shadow */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+            cursor: pointer;
         }
 
-        .dev-image-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .dev-image:hover {
+            transform: scale(1.05);
         }
     </style>
-
-    <!-- Modal Structure for Images -->
-    <div class="modal fade" id="imageModal1" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel1"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content" style="background-color: #121212;border: none;">
-                <div class="modal-body">
-                    <img src="/assets/img/NewShit%20(64-bit%20Development%20PCD3D_ES31)%20%2029-09-2023%2003_44_27%20PM.png" class="img-fluid"
-                        alt="Development Image 1" style="border-radius: 8px;width: 100%;height: auto;">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="imageModal2" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel2"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content" style="background-color: #121212;border: none;">
-                <div class="modal-body">
-                    <img src="/assets/img/NewShit%20-%20Unreal%20Editor%2029-09-2023%2003_48_29%20PM.png" class="img-fluid"
-                        alt="Development Image 2" style="border-radius: 8px;width: 100%;height: auto;">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="imageModal3" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel3"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content" style="background-color: #121212;border: none;">
-                <div class="modal-body">
-                    <img src="/assets/img/NewShit%20-%20Unreal%20Editor%2029-09-2023%2003_40_50%20PM.png" class="img-fluid"
-                        alt="Development Image 3" style="border-radius: 8px;width: 100%;height: auto;">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="imageModal4" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel4"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content" style="background-color: #121212;border: none;">
-                <div class="modal-body">
-                    <img src="/assets/img/NewShit%20-%20Unreal%20Editor%2029-09-2023%2003_36_46%20PM.png" class="img-fluid"
-                        alt="Development Image 4" style="border-radius: 8px;width: 100%;height: auto;">
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
-<!-- Bootstrap and jQuery JS (Add Bootstrap JS and jQuery for modal functionality) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById("thumbnailOverlay-card2").addEventListener("click", function () {
+        this.style.display = "none";
+        const video = document.getElementById("video-card2");
+        video.style.display = "block";
+        video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    });
 
-<!-- CSS for Scrollable Middle Paragraph -->
-<style>
-    /* Custom Scrollbar for the Middle Paragraph */
-    .scrollable-paragraph::-webkit-scrollbar {
-        width: 8px;
-    }
+    document.querySelectorAll('.full-scale-image').forEach(image => {
+        image.addEventListener('click', () => {
+            window.open(image.src, '_blank').focus(); // Opens the image in a new tab or window
+        });
+    });
 
-    .scrollable-paragraph::-webkit-scrollbar-thumb {
-        background-color: #555;
-        border-radius: 4px;
-    }
+</script><div class="container-fluid my-5 p-4"
+    style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
+    <!-- Rotated Text -->
+    <div class="rotated-text">7 MONTHS</div>
 
-    .scrollable-paragraph {
-        scrollbar-width: thin;
-        scrollbar-color: #555 #121212;
-    }
+    <div class="row">
+        <!-- Left Side: Embedded YouTube Video -->
+        <div class="col-lg-8 col-md-6 d-flex align-items-stretch">
+            <div class="portfolio-video"
+                style="position: relative;height: 100%;width: 100%;border-radius: 8px;overflow: hidden;box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);">
+                <div id="thumbnailOverlay-card3"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-image: url('https://img.youtube.com/vi/QQ1AG-K9oc8/maxresdefault.jpg'); background-size: cover; cursor: pointer;">
+                    <img src="/assets/img/play-video-1.png" alt="Play" style="width: 80px;height: 80px;">
+                </div>
+                <iframe id="video-card3" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/QQ1AG-K9oc8?enablejsapi=1" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border-radius: 8px;display: none;"></iframe>
+            </div>
+        </div>
 
-    /* Styles for Development Images */
-    .dev-image {
-        border-radius: 8px;
-        cursor: pointer;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        transition: transform 0.2s;
-        /* Animation on hover */
-    }
+        <!-- Right Side: Text and Details -->
+        <div class="col-lg-4 col-md-6 text-white" style="font-size: 16px;">
+            <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700;">Fistful Of Gore -
+                Lootera89</h2>
+            <div class="tags mb-3">
+                <span class="badge"
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Beat 'Em
+                    Up</span>
+                <span class="badge"
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Cross
+                    Platform</span>
+                <span class="badge"
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Solo
+                    Development</span>
+            </div>
+            <div class="scrollable-paragraph"
+                style="max-height: 120px; overflow-y: auto; line-height: 1.6; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 1em;">
+                <p>
+                    Fistful of Gore is a fast-paced beat 'em up game for Android and Windows. I started developing it in
+                    April 2023 using Unreal Engine 4, then moved to UE5. Players grow stronger as they fight tougher
+                    enemies across five different maps, each with a boss at the end.
+                </p>
+                <p>
+                    The game includes custom body dismemberment, 2D blood particles, health bars, and a global
+                    leaderboard. Right now, I'm working on character art, background art with an artist, and improving
+                    enemy types, bosses, and mobile controls.
+                </p>
 
-    .dev-image:hover {
-        transform: scale(1.05);
-        /* Slight zoom on hover */
-    }
-</style>
-</div></section><footer class="text-center py-4"><div class="container"><div class="row row-cols-1 row-cols-lg-3"><div class="col"><p class="text-muted my-2">Copyright&nbsp;© 2024 Maan Sharma</p></div></div></div></footer><script src="/assets/bootstrap/js/bootstrap.min.js"></script><script src="/assets/js/bs-init.js"></script><script src="/assets/js/-Filterable-Cards--Filterable-Cards.js"></script><script src="/assets/js/bold-and-dark.js"></script><script src="/assets/js/Lightbox-Gallery-baguetteBox.min.js"></script><script src="/assets/js/Lightbox-Gallery.js"></script><script src="/assets/js/ml-video.js"></script><script src="/assets/js/Skill-skill.js"></script><script src="/assets/js/Skill-wow.js"></script><script src="/assets/js/Video-Parallax-Background-v2-multiple-parallax.js"></script><script src="/assets/js/WOWSlider-about-us.js"></script></body></html>
+
+            </div>
+            <ul
+                style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: -0.35em;">
+                <li>Advanced AI using Learning Agent and PPO algorithm</li>
+                <li>Mobile and PC cross-platform optimized controls</li>
+                <li>Custom body dismemberment system with 2D blood effects</li>
+                <li>Global leaderboard, health bars and damage meters</li>
+                <li>Unique enemies variation</li>
+            </ul>
+            <a href="https://lootera89.itch.io/fistful-of-gore" class="btn mt-3"
+                style="background: linear-gradient(90deg, #4CAF50, #087F23); color: #fff; padding: 5px 10px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif; margin-bottom: 2em;">Download
+                Fistful Of Gore</a>
+
+        </div>
+    </div>
+
+
+    <!-- Development Images -->
+    <div class="row mt-4">
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/screenshots/ppr/fistful%20-%20Unreal%20Editor%2030-11-2024%2007_00_15%20AM.png"
+                class="img-fluid dev-image full-scale-image" alt="Dev Image 1">
+        </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/Fistful%20-%20Unreal%20Editor%2029-09-2023%2003_48_29%20PM.png" class="img-fluid dev-image full-scale-image"
+                alt="Dev Image 2">
+        </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/screenshots/ppr/fistful%20-%20Unreal%20Editor%2030-11-2024%2007_58_35%20AM.png"
+                class="img-fluid dev-image full-scale-image" alt="Dev Image 3">
+        </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/Fistful%20-%20Unreal%20Editor%2029-09-2023%2003_40_50%20PM.png" class="img-fluid dev-image full-scale-image"
+                alt="Dev Image 4">
+        </div>
+    </div>
+
+
+    <style>
+        .dev-image {
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .dev-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</div>
+
+<script>
+    document.getElementById("thumbnailOverlay-card3").addEventListener("click", function () {
+        this.style.display = "none";
+        const video = document.getElementById("video-card3");
+        video.style.display = "block";
+        video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    });
+    document.querySelectorAll('.full-scale-image').forEach(image => {
+        image.addEventListener('click', () => {
+            window.open(image.src, '_blank').focus(); // Opens the image in a new tab or window
+        });
+    });
+
+</script></section><footer class="text-center py-4"><div class="container"><div class="row row-cols-1 row-cols-lg-3"><div class="col"><p class="text-muted my-2">Copyright&nbsp;© 2024 Maan Sharma</p></div></div></div></footer><script src="/assets/bootstrap/js/bootstrap.min.js"></script><script src="/assets/js/bs-init.js"></script><script src="/assets/js/-Filterable-Cards--Filterable-Cards.js"></script><script src="/assets/js/bold-and-dark.js"></script><script src="/assets/js/Lightbox-Gallery-baguetteBox.min.js"></script><script src="/assets/js/Lightbox-Gallery.js"></script><script src="/assets/js/ml-video.js"></script><script src="/assets/js/Skill-skill.js"></script><script src="/assets/js/Skill-wow.js"></script><script src="/assets/js/Video-Parallax-Background-v2-multiple-parallax.js"></script><script src="/assets/js/WOWSlider-about-us.js"></script></body></html>
