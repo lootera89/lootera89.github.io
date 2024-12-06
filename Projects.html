@@ -19,20 +19,33 @@
       left: 50%;
       transform: translateX(-50%);
       height: 100%;
-      width: var(--rectangle-width, 1500px);
-      /* Customize width using CSS variable */
+      width: 100vw; /* Full viewport width */
+      max-width: 1500px; /* Maximum width for large screens */
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.623), rgba(24, 24, 24, 0.5));
       /* Transparent grey to black gradient */
       z-index: -1;
-      /* Keeps it behind other elements */
       pointer-events: none;
       /* Ensures it doesn't interfere with user interaction */
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
+      /* Shrink the width on smaller screens, while keeping it centered */
       .background-rectangle {
-        display: none;
-        /* Hides the rectangle on mobile */
+        width: 90vw; /* Shrink to 90% of the viewport width */
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Further shrink on mobile devices */
+      .background-rectangle {
+        width: 80vw; /* Shrink to 80% of the viewport width */
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* Further adjust on very small screens like phones */
+      .background-rectangle {
+        width: 70vw; /* Shrink to 70% of the viewport width */
       }
     }
   </style>
@@ -42,14 +55,16 @@
   <div class="background-rectangle"></div>
 </body>
 
-</html><section><div class="col-md-8 col-xl-6 text-center mx-auto" style="margin-bottom: -35px;margin-top: 50px;"><h2 class="display-1" style="font-family: 'Edit Undo BRK';color: rgb(255,255,255);font-size: 40PX;padding-bottom: 21px;">My Projects</h2></div><div class="container-fluid my-5 p-4"
+</html>
+<section><div class="col-md-8 col-xl-6 text-center mx-auto" style="margin-bottom: -35px;margin-top: 50px;"><h2 class="display-1" style="font-family: 'Edit Undo BRK';color: rgb(255,255,255);font-size: 40PX;padding-bottom: 21px;">My Projects</h2></div><div class="container-fluid my-5 p-4"
     style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
     <!-- Rotated Text -->
     <div class="rotated-text">6 MONTHS</div>
 
+
     <div class="row">
         <!-- Left Side: Embedded YouTube Video -->
-        <div class="col-lg-8 col-md-6 col-sm-12 d-flex align-items-stretch mb-4 mb-md-0">
+        <div class="col-lg-8 col-md-6 d-flex align-items-stretch">
             <div class="portfolio-video"
                 style="position: relative;height: 100%;width: 100%;border-radius: 8px;overflow: hidden;box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);">
                 <div id="thumbnailOverlay-card1"
@@ -64,6 +79,8 @@
             </div>
         </div>
 
+
+
         <!-- Right Side: Text and Details -->
         <div class="col-lg-4 col-md-6 col-sm-12 text-white">
             <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700;">Rgames - Fabwelt
@@ -73,8 +90,8 @@
                     style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Unreal
                     Engine</span>
                 <span class="badge"
-                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Full
-                    Stack Development</span>
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">AI and
+                    Physics</span>
                 <span class="badge"
                     style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">AA
                     Project</span>
@@ -82,16 +99,16 @@
             <div class="scrollable-paragraph"
                 style="max-height: 120px; overflow-y: auto; line-height: 1.6; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 1em;">
                 <p>
-                    I was hired by Fabwelt Studios in April 2023 to be their first Unreal Engine developer on a racing
-                    game project. Fabwelt is known for its blockchain FPS games, such as Arsenal. The project was set to
-                    create an MVP AA level racing game to attract funding for further development.
+                    I joined Fabwelt Studios in April 2023 as their first Unreal Engine developer to work on a racing
+                    game project. Fabwelt, known for its blockchain FPS games like Arsenal, aimed to create an MVP
+                    AA-level racing game to secure funding for further development.
                 </p>
                 <p>
-                    I worked independently on this project for six months, overcoming challenges that ranged from AI,
-                    car physics, UI design, to bringing a game to life. Everything is dynamic from car AI, advanced
-                    motion blur implementations up to being realistic while allowing an immersive experience fully
-                    optimized for low-end PCs.
+                    I worked on this project for six months, handling AI, car physics, UI design, and optimization. The
+                    game features dynamic car AI, advanced motion blur, and realistic physics, all designed to run
+                    smoothly on low-end PCs while offering an immersive experience.
                 </p>
+
             </div>
             <ul style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400;">
                 <li>Reinforcement Learning AI with PPO for opponent cars</li>
@@ -131,40 +148,45 @@
 
 
     <style>
+        /* Importing Pixelify Sans Font */
+        @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
         .portfolio-video {
             aspect-ratio: 16 / 9;
         }
 
-        /* Importing Pixelify Sans Font */
-        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+/* Rotated Text with Fixed Position and Dimensions */
+.rotated-text {
+    position: absolute;
+    top: 67%; /* Center vertically */
+    left: -27px; /* Fixed horizontal position */
+    width: 250px; /* Set a fixed width to standardize alignment */
+    transform: translateY(-50%) rotate(-90deg); /* Center vertically and rotate */
+    transform-origin: left center; /* Set the rotation pivot point */
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 5px 15px;
+    font-family: 'Tiny5', sans-serif;
+    font-weight: bold;
+    font-size: 29px;
+    letter-spacing: 2px;
+    white-space: nowrap; /* Prevent wrapping of text */
+    text-align: center; /* Centers text within the fixed width */
+    z-index: 10;
+}
 
-        /* Rotated Text with Pixelify Sans */
-        .rotated-text {
-            position: absolute;
-            top: 50%;
-            left: -100px;
-            transform: translateY(-50%) rotate(-90deg);
-            background-color: black;
-            color: white;
-            padding: 5px 15px;
-            font-family: 'Pixelify Sans', sans-serif;
-            font-weight: bold;
-            font-size: 29px;
-            letter-spacing: 2px;
-            white-space: nowrap;
-            z-index: 10;
-        }
+/* Mobile Adjustments for Rotated Text */
+@media (max-width: 768px) {
+    .rotated-text {
+        top: -25px; /* Adjust position for smaller screens */
+        left: 10px; /* Align it normally for mobile */
+        width: auto; /* Adapt to text length */
+        transform: rotate(0deg); /* Remove rotation for readability */
+        padding: 5px 10px;
+        font-size: 19px;
+    }
+}
 
-        /* Mobile Adjustments for "6 Months" text */
-        @media (max-width: 768px) {
-            .rotated-text {
-                top: -25px;
-                left: 10px;
-                transform: rotate(0deg);
-                padding: 5px 10px;
-                font-size: 19px;
-            }
-        }
 
         .full-scale-image {
             cursor: pointer;
@@ -199,7 +221,7 @@
 </script><div class="container-fluid my-5 p-4"
     style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
     <!-- Rotated Text -->
-    <div class="rotated-text">8 MONTHS</div>
+    <div class="rotated-text">9 MONTHS</div>
 
     <div class="row">
         <!-- Left Side: Embedded YouTube Video -->
@@ -224,20 +246,18 @@
                 Lootera89</h2>
             <div class="tags mb-3">
                 <span class="badge"
-                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Horror
-                    Game</span>
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Unreal Engine</span>
                 <span class="badge"
                     style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Atmospheric
                     Design</span>
                 <span class="badge"
                     style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Solo
-                    Development</span>
+                    Project</span>
             </div>
             <div class="scrollable-paragraph"
                 style="max-height: 120px; overflow-y: auto; line-height: 1.6; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 1em;">
                 <p>
-                    Demono: Home Alone is a short, story driven horror game I developed solo, starting in April 2024 on
-                    Unreal Engine 5. The story was written by two friends and voiced by a professional artist, I handled
+                    Demono: Home Alone is a short, story driven horror game I developed solo, starting in March 2024. The story was written by two friends and voiced by a professional artist, I handled
                     all aspects of the game's design and development.
                 </p>
                 <p>
@@ -247,12 +267,12 @@
                 </p>
             </div>
             <ul
-                style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: -0.35em;">
-                <li>Custom dithering post-process material for PSX aesthetics</li>
-                <li>Many player to world interactive elements</li>
+                style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 0em;">
+                <li>Complex dithering post process material for PSX aesthetics</li>
+                <li>Many player to world interactive objects</li>
+                <li>Scalable and dynamic quest system</li>
+                <li>Level streaming for optimization</li>
                 <li>Layered sound design for an immersive atmosphere</li>
-                <li>Level streaming for seamless gameplay</li>
-                <li>Highly optimized to a 400 MB final size</li>
             </ul>
             <a href="https://lootera89.itch.io/demono-home-alone" class="btn mt-3"
                 style="background: linear-gradient(90deg, #4CAF50, #087F23); color: #fff; padding: 5px 10px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif; margin-bottom: 2em;">Download
@@ -313,7 +333,7 @@
 </script><div class="container-fluid my-5 p-4"
     style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
     <!-- Rotated Text -->
-    <div class="rotated-text">7 MONTHS</div>
+    <div class="rotated-text">01 YEAR</div>
 
     <div class="row">
         <!-- Left Side: Embedded YouTube Video -->
@@ -338,20 +358,19 @@
                 Lootera89</h2>
             <div class="tags mb-3">
                 <span class="badge"
-                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Beat 'Em
-                    Up</span>
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Unreal Engine</span>
                 <span class="badge"
                     style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Cross
                     Platform</span>
                 <span class="badge"
                     style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Solo
-                    Development</span>
+                    Project</span>
             </div>
             <div class="scrollable-paragraph"
                 style="max-height: 120px; overflow-y: auto; line-height: 1.6; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 1em;">
                 <p>
                     Fistful of Gore is a fast-paced beat 'em up game for Android and Windows. I started developing it in
-                    April 2023 using Unreal Engine 4, then moved to UE5. Players grow stronger as they fight tougher
+                    April 2023. Players grow stronger as they fight tougher
                     enemies across five different maps, each with a boss at the end.
                 </p>
                 <p>
@@ -363,7 +382,7 @@
 
             </div>
             <ul
-                style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: -0.35em;">
+                style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 0em;">
                 <li>Advanced AI using Learning Agent and PPO algorithm</li>
                 <li>Mobile and PC cross-platform optimized controls</li>
                 <li>Custom body dismemberment system with 2D blood effects</li>
