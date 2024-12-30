@@ -256,10 +256,9 @@
             </div>
             <div class="scrollable-paragraph"
                 style="max-height: 120px; overflow-y: auto; line-height: 1.6; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 1em;">
-                <p>
-                    Demono: Home Alone is a short, story driven horror game I developed solo, starting in March 2024. The story was written by two friends and voiced by a professional artist, I handled
-                    all aspects of the game's design and development.
-                </p>
+                <p>  
+                    Demono: Home Alone is a short, story-driven horror game I developed solo. It gained significant popularity on its launch, ranking high in itch.io's most popular section. The story, written by two friends and voiced by a professional artist, complemented my work on all aspects of the game's design and development.  
+                    </p>
                 <p>
                     This game focuses on creating an immersive atmosphere using custom PSX-style dithering effects and
                     layered sound design. Despite its detailed visuals and interactive elements, the game is highly
@@ -439,6 +438,118 @@
         video.style.display = "block";
         video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     });
+    document.querySelectorAll('.full-scale-image').forEach(image => {
+        image.addEventListener('click', () => {
+            window.open(image.src, '_blank').focus(); // Opens the image in a new tab or window
+        });
+    });
+
+</script><div class="container-fluid my-5 p-4"
+    style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
+    <!-- Rotated Text -->
+    <div class="rotated-text">3 Days</div>
+
+    <div class="row">
+        <!-- Left Side: Embedded YouTube Video -->
+        <div class="col-lg-8 col-md-6 d-flex align-items-stretch">
+            <div class="portfolio-video"
+                style="position: relative;height: 100%;width: 100%;border-radius: 8px;overflow: hidden;box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);">
+                <div id="thumbnailOverlay-card5"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-image: url('https://img.youtube.com/vi/v6HOUIy5qvo/maxresdefault.jpg'); background-size: cover; cursor: pointer;">
+                    <img src="/assets/img/play-video-1.png" alt="Play" style="width: 80px;height: 80px;">
+                </div>
+                <iframe id="video-card5" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/v6HOUIy5qvo?enablejsapi=1" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border-radius: 8px;display: none;"></iframe>
+            </div>
+        </div>
+
+        <!-- Right Side: Text and Details -->
+        <div class="col-lg-4 col-md-6 text-white" style="font-size: 16px;">
+            <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700;">Volleyball With A
+                Stranger - Lootera89</h2>
+            <div class="tags mb-3">
+                <span class="badge"
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Unreal
+                    Engine</span>
+                <span class="badge"
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Quick
+                    Development</span>
+                <span class="badge"
+                    style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Solo Project</span>
+            </div>
+            <div class="scrollable-paragraph"
+                style="max-height: 120px; overflow-y: auto; line-height: 1.6; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 1em;">
+                <p>
+                    Volleyball With A Stranger is a short horror game I developed and designed solo for a Secret Santa Game Jam in just
+                    3 days. In this game, players face a stranger in a tense volleyball match with
+                    life or death scenario. the story has 2 potential endings.
+                </p>
+                <p>
+                    The game focuses on dynamic AI behavior and escalating tension through atmospheric design. It
+                    features smooth gameplay mechanics, eerie sound effects, and a minimalist approach to storytelling.
+                </p>
+            </div>
+            <ul
+                style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 0em;">
+                <li>Developed predictive AI for enemy volleyball shots</li>
+                <li>Implemented AI to dynamically track and follow the ball</li>
+                <li>Optimized gameplay with final 200MB game size</li>
+                <li>Created a horror atmosphere with sound and PSX visuals</li>
+            </ul>
+            <a href="https://lootera89.itch.io/volleyball-with-a-stranger" class="btn mt-3"
+                style="background: linear-gradient(90deg, #4CAF50, #087F23); color: #fff; padding: 5px 10px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif; margin-bottom: 2em;">Download
+                Volleyball With A Stranger</a>
+        </div>
+
+
+
+    </div>
+
+    <!-- Development Images -->
+    <div class="row mt-4">
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/screenshots/Volleyball/1%20gif.gif" class="img-fluid dev-image full-scale-image" alt="Dev Image 1">
+        </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/screenshots/Volleyball/DeathVolly%20-%20Unreal%20Editor%2030-12-2024%2011_59_51%20PM.png"
+                class="img-fluid dev-image full-scale-image" alt="Dev Image 2">
+        </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/screenshots/Volleyball/DeathVolly%20-%20Unreal%20Editor%2030-12-2024%2011_56_48%20PM.png"
+                class="img-fluid dev-image full-scale-image" alt="Dev Image 3">
+        </div>
+        <div class="col-6 col-sm-3">
+            <img src="/assets/img/screenshots/Volleyball/HighresScreenshot00006.png" class="img-fluid dev-image full-scale-image"
+                alt="Dev Image 4">
+        </div>
+    </div>
+
+
+    <style>
+        .dev-image {
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .dev-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</div>
+
+<script>
+    document.getElementById("thumbnailOverlay-card5").addEventListener("click", function () {
+        this.style.display = "none";
+        const video = document.getElementById("video-card5");
+        video.style.display = "block";
+        video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    });
+
     document.querySelectorAll('.full-scale-image').forEach(image => {
         image.addEventListener('click', () => {
             window.open(image.src, '_blank').focus(); // Opens the image in a new tab or window
