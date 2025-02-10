@@ -5,7 +5,156 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-</head><body style="background: linear-gradient(rgba(67,67,67,0.36) 0%, rgba(0,0,0,0.94) 100%), url(&quot;/assets/img/magicpattern-f8sDFh-So88-unsplash.jpg&quot;) bottom / contain, rgb(0,0,0);font-weight: bold;backdrop-filter: blur(0px) brightness(20%) contrast(83%) invert(0%) saturate(58%) sepia(0%);-webkit-backdrop-filter: blur(0px) brightness(20%) contrast(83%) invert(0%) saturate(58%) sepia(0%);"><nav class="navbar navbar-dark navbar-expand-md sticky-top py-3" style="background: rgb(18,18,18);" id="mainNav"><div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navcol-1"><ul class="navbar-nav mx-auto"><li class="nav-item"><a class="nav-link fw-normal" href="/index.html">About</a></li><li class="nav-item fw-normal"><a class="nav-link fw-normal active" href="/Projects.html">Projects</a></li><li class="nav-item"><a class="nav-link fw-normal" href="/Contact.html">Contact</a></li></ul></div></div></nav><!DOCTYPE html>
+</head><body style="background: linear-gradient(rgba(67,67,67,0.36) 0%, rgba(0,0,0,0.94) 100%), url(&quot;/assets/img/magicpattern-f8sDFh-So88-unsplash.jpg&quot;) bottom / contain, rgb(0,0,0);font-weight: bold;backdrop-filter: blur(0px) brightness(20%) contrast(83%) invert(0%) saturate(58%) sepia(0%);-webkit-backdrop-filter: blur(0px) brightness(20%) contrast(83%) invert(0%) saturate(58%) sepia(0%);"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Navbar</title>
+    <!-- Import Pompiere Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(20, 20, 20);
+            font-family: Arial, sans-serif; /* Default font for the rest of the page */
+        }
+
+        /* Apply Pompiere font only to the navbar */
+        .navbar {
+            font-family: 'Pompiere', cursive;
+            background-color: rgb(20, 20, 20);
+            padding: 10px 20px;
+            position: relative;
+            overflow: visible;
+        }
+
+        .navbar-dark .navbar-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff !important; /* Light bone color for text */
+            margin: 0 15px;
+            font-size: 1.7em;
+            font-weight: normal; /* Ensure normal font weight */
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover,
+        .navbar-dark .navbar-nav .nav-link:focus {
+            color: #6d6d6d !important; /* Darker bone color for hover */
+        }
+
+        .navbar-dark .navbar-nav .nav-link.active {
+            color: #6d6d6d !important; /* Darker bone color for active link */
+            font-weight: normal !important; /* Ensure active link is not bold */
+        }
+
+        .navbar-toggler {
+            border-color: #ffffff!important; /* Light bone color for toggle button */
+            padding: 0.25rem 0.5rem; /* Smaller button */
+        }
+      
+        .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    width: 1.2em; /* Smaller icon */
+    height: 1.2em;
+}
+
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+            margin-right: 20%; /* Offset for the nav menu text */
+        }
+
+        @media (max-width: 1024px) {
+            .navbar-nav {
+                margin-right: 15%; /* Adjusted offset for tablet */
+            }
+
+            .navbar-dark .navbar-nav .nav-link {
+                font-size: 1.5em; /* Smaller font size on tablet */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav {
+                margin-right: 10%; /* Adjusted offset for mobile */
+            }
+
+            .navbar-dark .navbar-nav .nav-link {
+                font-size: 1.4em; /* Smaller font size on mobile */
+            }
+
+            .navbar-nav {
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-end; /* Align items to the right */
+            }
+
+            .navbar-collapse {
+                display: none; /* Hide the full menu */
+            }
+
+            .navbar-toggler {
+                display: block; /* Show the toggle button */
+            }
+
+            .navbar-collapse.show {
+                display: flex; /* Show the menu when toggled */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="mainNav" class="navbar navbar-dark navbar-expand-md sticky-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Projects.html"> Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Resume.html">Résumé</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to handle active link -->
+    <script>
+        // Get the current page URL
+        const currentPageUrl = window.location.href;
+
+        // Select all navbar links
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+        // Loop through each link
+        navLinks.forEach(link => {
+            // Check if the link's href matches the current page URL
+            if (link.href === currentPageUrl) {
+                // Add the 'active' class to the matching link
+                link.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -38,14 +187,14 @@
     @media (max-width: 768px) {
       /* Further shrink on mobile devices */
       .background-rectangle {
-        width: 80vw; /* Shrink to 80% of the viewport width */
+        width: 0vw; /* Shrink to 80% of the viewport width */
       }
     }
 
     @media (max-width: 480px) {
       /* Further adjust on very small screens like phones */
       .background-rectangle {
-        width: 70vw; /* Shrink to 70% of the viewport width */
+        width: 0vw; /* Shrink to 70% of the viewport width */
       }
     }
   </style>
@@ -60,7 +209,6 @@
     style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
     <!-- Rotated Text -->
     <div class="rotated-text">6 MONTHS</div>
-
 
     <div class="row">
         <!-- Left Side: Embedded YouTube Video -->
@@ -78,8 +226,6 @@
                     allowfullscreen style="border-radius: 8px;display: none;"></iframe>
             </div>
         </div>
-
-
 
         <!-- Right Side: Text and Details -->
         <div class="col-lg-4 col-md-6 col-sm-12 text-white">
@@ -108,7 +254,6 @@
                     game features dynamic car AI, advanced motion blur, and realistic physics, all designed to run
                     smoothly on low-end PCs while offering an immersive experience.
                 </p>
-
             </div>
             <ul style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400;">
                 <li>Reinforcement Learning AI with PPO for opponent cars</li>
@@ -129,23 +274,26 @@
     <!-- Development Images -->
     <div class="row mt-4">
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_18_42%20AM.png" class="img-fluid dev-image full-scale-image"
+            <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_18_42%20AM.png" class="img-fluid dev-image full-scale1-image"
                 alt="Dev Image 1">
         </div>
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/HighresScreenshot000010.png" class="img-fluid dev-image full-scale-image" alt="Dev Image 2">
+            <img src="/assets/img/HighresScreenshot000010.png" class="img-fluid dev-image full-scale1-image" alt="Dev Image 2">
         </div>
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_15_19%20AM.png" class="img-fluid dev-image full-scale-image"
+            <img src="/assets/img/RGame%20-%20Unreal%20Editor%2029-09-2023%2002_15_19%20AM.png" class="img-fluid dev-image full-scale1-image"
                 alt="Dev Image 3">
         </div>
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/HighresScreenshot1.png" class="img-fluid dev-image full-scale-image" alt="Dev Image 4">
+            <img src="/assets/img/HighresScreenshot1.png" class="img-fluid dev-image full-scale1-image" alt="Dev Image 4">
         </div>
     </div>
 
-
-
+    <!-- Modal for Zoomed Images -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="zoomedImage">
+    </div>
 
     <style>
         /* Importing Pixelify Sans Font */
@@ -155,38 +303,37 @@
             aspect-ratio: 16 / 9;
         }
 
-/* Rotated Text with Fixed Position and Dimensions */
-.rotated-text {
-    position: absolute;
-    top: 67%; /* Center vertically */
-    left: -27px; /* Fixed horizontal position */
-    width: 250px; /* Set a fixed width to standardize alignment */
-    transform: translateY(-50%) rotate(-90deg); /* Center vertically and rotate */
-    transform-origin: left center; /* Set the rotation pivot point */
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 5px 15px;
-    font-family: 'Tiny5', sans-serif;
-    font-weight: bold;
-    font-size: 29px;
-    letter-spacing: 2px;
-    white-space: nowrap; /* Prevent wrapping of text */
-    text-align: center; /* Centers text within the fixed width */
-    z-index: 10;
-}
+        /* Rotated Text with Fixed Position and Dimensions */
+        .rotated-text {
+            position: absolute;
+            top: 67%; /* Center vertically */
+            left: -27px; /* Fixed horizontal position */
+            width: 250px; /* Set a fixed width to standardize alignment */
+            transform: translateY(-50%) rotate(-90deg); /* Center vertically and rotate */
+            transform-origin: left center; /* Set the rotation pivot point */
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 5px 15px;
+            font-family: 'Tiny5', sans-serif;
+            font-weight: bold;
+            font-size: 29px;
+            letter-spacing: 2px;
+            white-space: nowrap; /* Prevent wrapping of text */
+            text-align: center; /* Centers text within the fixed width */
+            z-index: 10;
+        }
 
-/* Mobile Adjustments for Rotated Text */
-@media (max-width: 768px) {
-    .rotated-text {
-        top: -25px; /* Adjust position for smaller screens */
-        left: 10px; /* Align it normally for mobile */
-        width: auto; /* Adapt to text length */
-        transform: rotate(0deg); /* Remove rotation for readability */
-        padding: 5px 10px;
-        font-size: 19px;
-    }
-}
-
+        /* Mobile Adjustments for Rotated Text */
+        @media (max-width: 768px) {
+            .rotated-text {
+                top: -25px; /* Adjust position for smaller screens */
+                left: 10px; /* Align it normally for mobile */
+                width: auto; /* Adapt to text length */
+                transform: rotate(0deg); /* Remove rotation for readability */
+                padding: 5px 10px;
+                font-size: 19px;
+            }
+        }
 
         .full-scale-image {
             cursor: pointer;
@@ -198,27 +345,118 @@
         .full-scale-image:hover {
             transform: scale(1.05);
         }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(20, 20, 20, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            display: block;
+            margin: auto;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #6d6d6d;
+            border-radius: 8px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #6d6d6d;
+        }
     </style>
 </div>
 
-
-
-
 <script>
+    // Get the modal and image elements
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("zoomedImage");
+    const closeBtn = document.querySelector(".close");
+
+    // Function to open the modal with the clicked image
+    function openModal(imageSrc) {
+        modal.style.display = "block";
+        modalImg.src = imageSrc;
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    // Add click event listeners to all images with the specified class
+    document.querySelectorAll('.img-fluid.dev-image.full-scale1-image').forEach(image => {
+        image.addEventListener('click', () => {
+            openModal(image.src);
+        });
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close the modal when clicking outside the image
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    // YouTube video functionality
     document.getElementById("thumbnailOverlay-card1").addEventListener("click", function () {
         this.style.display = "none";
         const video = document.getElementById("video-card1");
         video.style.display = "block";
         video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     });
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Break Example</title>
+    <style>
+        .bone-line {
+            width: 1200px; /* Width of the line */
+            height: 2px; /* Thickness of the line */
+            background-color: rgb(107, 107, 107); /* Bone color */
+            margin: 50px auto; /* Gap above and below, and center the line */
+            border-radius: 5px; /* Rounded corners */
+        }
 
-    document.querySelectorAll('.full-scale-image').forEach(image => {
-        image.addEventListener('click', () => {
-            window.open(image.src, '_blank').focus(); // Opens the image in a new tab or window
-        });
-    });
-
-</script><div class="container-fluid my-5 p-4"
+        @media (max-width: 1200px) {
+            .bone-line {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bone-line"></div>
+</body>
+</html><div class="container-fluid my-5 p-4"
     style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
     <!-- Rotated Text -->
     <div class="rotated-text">9 MONTHS</div>
@@ -277,59 +515,155 @@
                 style="background: linear-gradient(90deg, #4CAF50, #087F23); color: #fff; padding: 5px 10px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif; margin-bottom: 2em;">Download
                 Demono: Home Alone</a>
         </div>
-
-
     </div>
 
     <!-- Development Images -->
     <div class="row mt-4">
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/screenshots/demono/gif4.gif" class="img-fluid dev-image full-scale-image" alt="Dev Image 1">
+            <img src="/assets/img/screenshots/demono/gif4.gif" class="img-fluid zoomable-image" id="dev-image-1" alt="Dev Image 1">
         </div>
         <div class="col-6 col-sm-3">
             <img src="/assets/img/screenshots/demono/PP_Dithering%2006-12-2024%2007_00_18%20AM.png"
-                class="img-fluid dev-image full-scale-image" alt="Dev Image 2">
+                class="img-fluid zoomable-image" id="dev-image-2" alt="Dev Image 2">
         </div>
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/screenshots/demono/HighresScreenshot00024.png" class="img-fluid dev-image full-scale-image"
-                alt="Dev Image 3">
+            <img src="/assets/img/screenshots/demono/HighresScreenshot00024.png" class="img-fluid zoomable-image"
+                id="dev-image-3" alt="Dev Image 3">
         </div>
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/screenshots/demono/HighresScreenshot00022.png" class="img-fluid dev-image full-scale-image"
-                alt="Dev Image 4">
+            <img src="/assets/img/screenshots/demono/HighresScreenshot00022.png" class="img-fluid zoomable-image"
+                id="dev-image-4" alt="Dev Image 4">
         </div>
     </div>
 
+    <!-- Modal for Zoomed Images -->
+    <div id="imageModal2" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="zoomedImage2">
+    </div>
 
     <style>
-        .dev-image {
+        .zoomable-image {
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.2s;
             cursor: pointer;
         }
 
-        .dev-image:hover {
+        .zoomable-image:hover {
             transform: scale(1.05);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(20, 20, 20, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            display: block;
+            margin: auto;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #6d6d6d;
+            border-radius: 8px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #6d6d6d;
         }
     </style>
 </div>
 
 <script>
+    // Get the modal and image elements for this card
+    const modal2 = document.getElementById("imageModal2");
+    const modalImg2 = document.getElementById("zoomedImage2");
+    const closeBtn2 = document.querySelector("#imageModal2 .close");
+
+    // Function to open the modal with the clicked image
+    function openModal2(imageSrc) {
+        modal2.style.display = "block";
+        modalImg2.src = imageSrc;
+    }
+
+    // Function to close the modal
+    function closeModal2() {
+        modal2.style.display = "none";
+    }
+
+    // Add click event listeners to all images with the new class name
+    document.querySelectorAll('.zoomable-image').forEach(image => {
+        image.addEventListener('click', () => {
+            openModal2(image.src);
+        });
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn2.addEventListener('click', closeModal2);
+
+    // Close the modal when clicking outside the image
+    window.addEventListener('click', (event) => {
+        if (event.target === modal2) {
+            closeModal2();
+        }
+    });
+
+    // YouTube video functionality
     document.getElementById("thumbnailOverlay-card2").addEventListener("click", function () {
         this.style.display = "none";
         const video = document.getElementById("video-card2");
         video.style.display = "block";
         video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     });
+</script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Break Example</title>
+    <style>
+        .bone-line {
+            width: 1200px; /* Width of the line */
+            height: 2px; /* Thickness of the line */
+            background-color: rgb(107, 107, 107); /* Bone color */
+            margin: 50px auto; /* Gap above and below, and center the line */
+            border-radius: 5px; /* Rounded corners */
+        }
 
-    document.querySelectorAll('.full-scale-image').forEach(image => {
-        image.addEventListener('click', () => {
-            window.open(image.src, '_blank').focus(); // Opens the image in a new tab or window
-        });
-    });
-
-</script><div class="container-fluid my-5 p-4"
+        @media (max-width: 1200px) {
+            .bone-line {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bone-line"></div>
+</body>
+</html><div class="container-fluid my-5 p-4"
     style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
     <!-- Rotated Text -->
     <div class="rotated-text">01 YEAR</div>
@@ -377,8 +711,6 @@
                     leaderboard. Right now, I'm working on character art, background art with an artist, and improving
                     enemy types, bosses, and mobile controls.
                 </p>
-
-
             </div>
             <ul
                 style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 0em;">
@@ -391,60 +723,157 @@
             <a href="https://lootera89.itch.io/fistful-of-gore" class="btn mt-3"
                 style="background: linear-gradient(90deg, #4CAF50, #087F23); color: #fff; padding: 5px 10px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif; margin-bottom: 2em;">Download
                 Fistful Of Gore</a>
-
         </div>
     </div>
-
 
     <!-- Development Images -->
     <div class="row mt-4">
         <div class="col-6 col-sm-3">
             <img src="/assets/img/screenshots/ppr/fistful%20-%20Unreal%20Editor%2030-11-2024%2007_00_15%20AM.png"
-                class="img-fluid dev-image full-scale-image" alt="Dev Image 1">
+                class="img-fluid zoomable-image-2" id="dev-image-5" alt="Dev Image 1">
         </div>
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/Fistful%20-%20Unreal%20Editor%2029-09-2023%2003_48_29%20PM.png" class="img-fluid dev-image full-scale-image"
-                alt="Dev Image 2">
+            <img src="/assets/img/Fistful%20-%20Unreal%20Editor%2029-09-2023%2003_48_29%20PM.png" class="img-fluid zoomable-image-2"
+                id="dev-image-6" alt="Dev Image 2">
         </div>
         <div class="col-6 col-sm-3">
             <img src="/assets/img/screenshots/ppr/fistful%20-%20Unreal%20Editor%2030-11-2024%2007_58_35%20AM.png"
-                class="img-fluid dev-image full-scale-image" alt="Dev Image 3">
+                class="img-fluid zoomable-image-2" id="dev-image-7" alt="Dev Image 3">
         </div>
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/Fistful%20-%20Unreal%20Editor%2029-09-2023%2003_40_50%20PM.png" class="img-fluid dev-image full-scale-image"
-                alt="Dev Image 4">
+            <img src="/assets/img/Fistful%20-%20Unreal%20Editor%2029-09-2023%2003_40_50%20PM.png" class="img-fluid zoomable-image-2"
+                id="dev-image-8" alt="Dev Image 4">
         </div>
     </div>
 
+    <!-- Modal for Zoomed Images -->
+    <div id="imageModal3" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="zoomedImage3">
+    </div>
 
     <style>
-        .dev-image {
+        .zoomable-image-2 {
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.2s;
             cursor: pointer;
         }
 
-        .dev-image:hover {
+        .zoomable-image-2:hover {
             transform: scale(1.05);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(20, 20, 20, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            display: block;
+            margin: auto;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #6d6d6d;
+            border-radius: 8px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #6d6d6d;
         }
     </style>
 </div>
 
 <script>
+    // Get the modal and image elements for this card
+    const modal3 = document.getElementById("imageModal3");
+    const modalImg3 = document.getElementById("zoomedImage3");
+    const closeBtn3 = document.querySelector("#imageModal3 .close");
+
+    // Function to open the modal with the clicked image
+    function openModal3(imageSrc) {
+        modal3.style.display = "block";
+        modalImg3.src = imageSrc;
+    }
+
+    // Function to close the modal
+    function closeModal3() {
+        modal3.style.display = "none";
+    }
+
+    // Add click event listeners to all images with the new class name
+    document.querySelectorAll('.zoomable-image-2').forEach(image => {
+        image.addEventListener('click', () => {
+            openModal3(image.src);
+        });
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn3.addEventListener('click', closeModal3);
+
+    // Close the modal when clicking outside the image
+    window.addEventListener('click', (event) => {
+        if (event.target === modal3) {
+            closeModal3();
+        }
+    });
+
+    // YouTube video functionality
     document.getElementById("thumbnailOverlay-card3").addEventListener("click", function () {
         this.style.display = "none";
         const video = document.getElementById("video-card3");
         video.style.display = "block";
         video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     });
-    document.querySelectorAll('.full-scale-image').forEach(image => {
-        image.addEventListener('click', () => {
-            window.open(image.src, '_blank').focus(); // Opens the image in a new tab or window
-        });
-    });
+</script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Break Example</title>
+    <style>
+        .bone-line {
+            width: 1200px; /* Width of the line */
+            height: 2px; /* Thickness of the line */
+            background-color: rgb(107, 107, 107); /* Bone color */
+            margin: 50px auto; /* Gap above and below, and center the line */
+            border-radius: 5px; /* Rounded corners */
+        }
 
-</script><div class="container-fluid my-5 p-4"
+        @media (max-width: 1200px) {
+            .bone-line {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bone-line"></div>
+</body>
+</html><div class="container-fluid my-5 p-4"
     style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
     <!-- Rotated Text -->
     <div class="rotated-text">3 Days</div>
@@ -503,155 +932,348 @@
                 style="background: linear-gradient(90deg, #4CAF50, #087F23); color: #fff; padding: 5px 10px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif; margin-bottom: 2em;">Download
                 Volleyball With A Stranger</a>
         </div>
-
-
-
     </div>
 
     <!-- Development Images -->
     <div class="row mt-4">
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/screenshots/Volleyball/1%20gif.gif" class="img-fluid dev-image full-scale-image" alt="Dev Image 1">
+            <img src="/assets/img/screenshots/Volleyball/1%20gif.gif" class="img-fluid zoomable-image-3" id="dev-image-9" alt="Dev Image 1">
         </div>
         <div class="col-6 col-sm-3">
             <img src="/assets/img/screenshots/Volleyball/DeathVolly%20-%20Unreal%20Editor%2030-12-2024%2011_59_51%20PM.png"
-                class="img-fluid dev-image full-scale-image" alt="Dev Image 2">
+                class="img-fluid zoomable-image-3" id="dev-image-10" alt="Dev Image 2">
         </div>
         <div class="col-6 col-sm-3">
             <img src="/assets/img/screenshots/Volleyball/DeathVolly%20-%20Unreal%20Editor%2030-12-2024%2011_56_48%20PM.png"
-                class="img-fluid dev-image full-scale-image" alt="Dev Image 3">
+                class="img-fluid zoomable-image-3" id="dev-image-11" alt="Dev Image 3">
         </div>
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/screenshots/Volleyball/HighresScreenshot00006.png" class="img-fluid dev-image full-scale-image"
-                alt="Dev Image 4">
+            <img src="/assets/img/screenshots/Volleyball/HighresScreenshot00006.png" class="img-fluid zoomable-image-3"
+                id="dev-image-12" alt="Dev Image 4">
         </div>
     </div>
 
+    <!-- Modal for Zoomed Images -->
+    <div id="imageModal5" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="zoomedImage5">
+    </div>
 
     <style>
-        .dev-image {
+        .zoomable-image-3 {
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.2s;
             cursor: pointer;
         }
 
-        .dev-image:hover {
+        .zoomable-image-3:hover {
             transform: scale(1.05);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(20, 20, 20, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            display: block;
+            margin: auto;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #6d6d6d;
+            border-radius: 8px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #6d6d6d;
         }
     </style>
 </div>
 
 <script>
+    // Get the modal and image elements for this card
+    const modal5 = document.getElementById("imageModal5");
+    const modalImg5 = document.getElementById("zoomedImage5");
+    const closeBtn5 = document.querySelector("#imageModal5 .close");
+
+    // Function to open the modal with the clicked image
+    function openModal5(imageSrc) {
+        modal5.style.display = "block";
+        modalImg5.src = imageSrc;
+    }
+
+    // Function to close the modal
+    function closeModal5() {
+        modal5.style.display = "none";
+    }
+
+    // Add click event listeners to all images with the new class name
+    document.querySelectorAll('.zoomable-image-3').forEach(image => {
+        image.addEventListener('click', () => {
+            openModal5(image.src);
+        });
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn5.addEventListener('click', closeModal5);
+
+    // Close the modal when clicking outside the image
+    window.addEventListener('click', (event) => {
+        if (event.target === modal5) {
+            closeModal5();
+        }
+    });
+
+    // YouTube video functionality
     document.getElementById("thumbnailOverlay-card5").addEventListener("click", function () {
         this.style.display = "none";
         const video = document.getElementById("video-card5");
         video.style.display = "block";
         video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     });
+</script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Break Example</title>
+    <style>
+        .bone-line {
+            width: 1200px; /* Width of the line */
+            height: 2px; /* Thickness of the line */
+            background-color: rgb(107, 107, 107); /* Bone color */
+            margin: 50px auto; /* Gap above and below, and center the line */
+            border-radius: 5px; /* Rounded corners */
+        }
 
-    document.querySelectorAll('.full-scale-image').forEach(image => {
-        image.addEventListener('click', () => {
-            window.open(image.src, '_blank').focus(); // Opens the image in a new tab or window
-        });
-    });
-
-</script><div class="container-fluid my-5 p-4"
+        @media (max-width: 1200px) {
+            .bone-line {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bone-line"></div>
+</body>
+</html><div class="container-fluid my-5 p-4"
     style="background: rgba(0, 0, 0, 0.8);backdrop-filter: blur(10px);-webkit-backdrop-filter: blur(10px);padding: 30px;box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.5);max-width: 1300px;margin: auto;position: relative;">
     <!-- Rotated Text -->
     <div class="rotated-text">04 Months</div>
 
     <div class="row">
-<!-- Left Side: Embedded YouTube Video -->
-<div class="col-lg-8 col-md-6 d-flex align-items-stretch">
-    <div class="portfolio-video"
-        style="position: relative;height: 100%;width: 100%;border-radius: 8px;overflow: hidden;box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);">
-        <div id="thumbnailOverlay-card4"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-image: url('https://img.youtube.com/vi/VmnvAbRzqsY/maxresdefault.jpg'); background-size: cover; cursor: pointer;">
-            <img src="/assets/img/play-video-1.png" alt="Play" style="width: 80px;height: 80px;">
+        <!-- Left Side: Embedded YouTube Video -->
+        <div class="col-lg-8 col-md-6 d-flex align-items-stretch">
+            <div class="portfolio-video"
+                style="position: relative;height: 100%;width: 100%;border-radius: 8px;overflow: hidden;box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);">
+                <div id="thumbnailOverlay-card4"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-image: url('https://img.youtube.com/vi/VmnvAbRzqsY/maxresdefault.jpg'); background-size: cover; cursor: pointer;">
+                    <img src="/assets/img/play-video-1.png" alt="Play" style="width: 80px;height: 80px;">
+                </div>
+                <iframe id="video-card4" width="100%" height="100%"
+                    src="https://www.youtube.com/embed/wCAvRvhOx1o?enablejsapi=1" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen style="border-radius: 8px;display: none;"></iframe>
+            </div>
         </div>
-        <iframe id="video-card4" width="100%" height="100%"
-            src="https://www.youtube.com/embed/wCAvRvhOx1o?enablejsapi=1" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen style="border-radius: 8px;display: none;"></iframe>
-    </div>
-</div>
 
-
-<!-- Right Side: Text and Details -->
-<div class="col-lg-4 col-md-6 text-white" style="font-size: 16px;">
-    <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700;">Hidden Beyond - Yellow Whale Labs</h2>
-    <div class="tags mb-3">
-        <span class="badge" style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Unreal Engine</span>
-        <span class="badge" style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Multiplayer</span>
-        <span class="badge" style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">AA Project</span>
+        <!-- Right Side: Text and Details -->
+        <div class="col-lg-4 col-md-6 text-white" style="font-size: 16px;">
+            <h2 style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700;">Hidden Beyond - Yellow Whale Labs</h2>
+            <div class="tags mb-3">
+                <span class="badge" style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Unreal Engine</span>
+                <span class="badge" style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">Multiplayer</span>
+                <span class="badge" style="background-color: #7238dd;font-size: 13px;padding: 5px 12px;border-radius: 15px;">AA Project</span>
+            </div>
+            <div class="scrollable-paragraph" style="max-height: 120px; overflow-y: auto; line-height: 1.6; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 1em;">
+                <p>
+                    Hidden Beyond is a multiplayer blockchain game currently under development by Yellow Whale Labs. I joined Yellow Whale Labs in December 2023 as a multiplayer and backend developer. I worked there for 4 months. The game is still in development.
+                </p>
+                <p>
+                    I worked on multiplayer systems like setting up P2P servers and using EOS, Playfab, and AWS. I made character creation, main menu UI, and a login-signup system. I also migrated Metahuman models to game characters and focused on optimizing the game.
+                </p>
+            </div>
+            <ul style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 0em;">
+                <li>Set up P2P multiplayer servers</li>
+                <li>Worked with EOS, Playfab, and AWS</li>
+                <li>Created login and sign up system</li>
+                <li>Migrated Metahuman models to characters</li>
+                <li>Worked on game user interface</li>
+            </ul>
+            <a href="https://x.com/HiddenBeyondXYZ" class="btn mt-3" style="background: linear-gradient(90deg, #6A7FDB, #3A4CA3); color: #fff; padding: 5px 10px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif; margin-bottom: 2em;">Hidden Beyond Twitter</a>
+        </div>
     </div>
-    <div class="scrollable-paragraph" style="max-height: 120px; overflow-y: auto; line-height: 1.6; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 1em;">
-        <p>
-            Hidden Beyond is a multiplayer blockchain game currently under development by Yellow Whale Labs. I joined Yellow Whale Labs in December 2023 as a multiplayer and backend developer. I worked there for 4 months. The game is still in development.
-        </p>
-        <p>
-            I worked on multiplayer systems like setting up P2P servers and using EOS, Playfab, and AWS. I made character creation, main menu UI, and a login-signup system. I also migrated Metahuman models to game characters and focused on optimizing the game.
-        </p>
-    </div>
-    <ul style="line-height: 1.8; font-size: 14px; font-family: 'Poppins', sans-serif; font-weight: 400; margin-bottom: 0em;">
-        <li>Set up P2P multiplayer servers</li>
-        <li>Worked with EOS, Playfab, and AWS</li>
-        <li>Created login and sign up system</li>
-        <li>Migrated Metahuman models to characters</li>
-        <li>Optimized performance and backend systems</li>
-    </ul>
-    <a href="https://x.com/HiddenBeyondXYZ" class="btn mt-3" style="background: linear-gradient(90deg, #6A7FDB, #3A4CA3); color: #fff; padding: 5px 10px; border-radius: 4px; text-decoration: none; font-family: 'Poppins', sans-serif; margin-bottom: 2em;">Hidden Beyond Twitter</a>
-</div>
-
 
     <!-- Development Images -->
     <div class="row mt-4">
         <div class="col-6 col-sm-3">
             <img src="/assets/img/screenshots/Hidden%20Beyond/Hidden%20Beyond%20-%20Unreal%20Editor%2030-11-2024%2007_00_15%20AM.png"
-                class="img-fluid dev-image full-scale-image" alt="Dev Image 1">
+                class="img-fluid zoomable-image-4" id="dev-image-13" alt="Dev Image 1">
         </div>
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/screenshots/Hidden%20Beyond/W_Register%2006-12-2024%2007_44_06%20PM.png" class="img-fluid dev-image full-scale-image"
-                alt="Dev Image 2">
+            <img src="/assets/img/screenshots/Hidden%20Beyond/W_Register%2006-12-2024%2007_44_06%20PM.png" class="img-fluid zoomable-image-4"
+                id="dev-image-14" alt="Dev Image 2">
         </div>
         <div class="col-6 col-sm-3">
             <img src="/assets/img/screenshots/Hidden%20Beyond/hidden_beyond_gameplay.png"
-                class="img-fluid dev-image full-scale-image" alt="Dev Image 3">
+                class="img-fluid zoomable-image-4" id="dev-image-15" alt="Dev Image 3">
         </div>
         <div class="col-6 col-sm-3">
-            <img src="/assets/img/screenshots/Hidden%20Beyond/Hidden%20Beyond%20-%20Unreal%20Editor.png" class="img-fluid dev-image full-scale-image"
-                alt="Dev Image 4">
+            <img src="/assets/img/screenshots/Hidden%20Beyond/Hidden%20Beyond%20-%20Unreal%20Editor.png" class="img-fluid zoomable-image-4"
+                id="dev-image-16" alt="Dev Image 4">
         </div>
     </div>
 
+    <!-- Modal for Zoomed Images -->
+    <div id="imageModal4" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="zoomedImage4">
+    </div>
 
     <style>
-        .dev-image {
+        .zoomable-image-4 {
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.2s;
             cursor: pointer;
         }
 
-        .dev-image:hover {
+        .zoomable-image-4:hover {
             transform: scale(1.05);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(20, 20, 20, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            display: block;
+            margin: auto;
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #6d6d6d;
+            border-radius: 8px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #6d6d6d;
         }
     </style>
 </div>
 
 <script>
+    // Get the modal and image elements for this card
+    const modal4 = document.getElementById("imageModal4");
+    const modalImg4 = document.getElementById("zoomedImage4");
+    const closeBtn4 = document.querySelector("#imageModal4 .close");
+
+    // Function to open the modal with the clicked image
+    function openModal4(imageSrc) {
+        modal4.style.display = "block";
+        modalImg4.src = imageSrc;
+    }
+
+    // Function to close the modal
+    function closeModal4() {
+        modal4.style.display = "none";
+    }
+
+    // Add click event listeners to all images with the new class name
+    document.querySelectorAll('.zoomable-image-4').forEach(image => {
+        image.addEventListener('click', () => {
+            openModal4(image.src);
+        });
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn4.addEventListener('click', closeModal4);
+
+    // Close the modal when clicking outside the image
+    window.addEventListener('click', (event) => {
+        if (event.target === modal4) {
+            closeModal4();
+        }
+    });
+
+    // YouTube video functionality
     document.getElementById("thumbnailOverlay-card4").addEventListener("click", function () {
         this.style.display = "none";
         const video = document.getElementById("video-card4");
         video.style.display = "block";
         video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
     });
-    document.querySelectorAll('.full-scale-image').forEach(image => {
-        image.addEventListener('click', () => {
-            window.open(image.src, '_blank').focus(); // Opens the image in a new tab or window
-        });
-    });
+</script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Break Example</title>
+    <style>
+        .bone-line {
+            width: 1200px; /* Width of the line */
+            height: 2px; /* Thickness of the line */
+            background-color: rgb(107, 107, 107); /* Bone color */
+            margin: 50px auto; /* Gap above and below, and center the line */
+            border-radius: 5px; /* Rounded corners */
+        }
 
-</script></section><footer class="text-center py-4"><div class="container"><div class="row row-cols-1 row-cols-lg-3"><div class="col"><p class="text-muted my-2">Copyright&nbsp;© 2024 Maan Sharma</p></div></div></div></footer><script src="/assets/bootstrap/js/bootstrap.min.js"></script><script src="/assets/js/bs-init.js"></script><script src="/assets/js/-Filterable-Cards--Filterable-Cards.js"></script><script src="/assets/js/bold-and-dark.js"></script><script src="/assets/js/Lightbox-Gallery-baguetteBox.min.js"></script><script src="/assets/js/Lightbox-Gallery.js"></script><script src="/assets/js/ml-video.js"></script><script src="/assets/js/Skill-skill.js"></script><script src="/assets/js/Skill-wow.js"></script><script src="/assets/js/Video-Parallax-Background-v2-multiple-parallax.js"></script><script src="/assets/js/WOWSlider-about-us.js"></script></body></html>
+        @media (max-width: 1200px) {
+            .bone-line {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bone-line"></div>
+</body>
+</html></section><footer class="text-center py-4"><div class="container"><div class="row row-cols-1 row-cols-lg-3"><div class="col"><p class="text-muted my-2">Copyright&nbsp;© 2024 Maan Sharma</p></div></div></div></footer><script src="/assets/bootstrap/js/bootstrap.min.js"></script><script src="/assets/js/bs-init.js"></script><script src="/assets/js/-Filterable-Cards--Filterable-Cards.js"></script><script src="/assets/js/bold-and-dark.js"></script><script src="/assets/js/Lightbox-Gallery-baguetteBox.min.js"></script><script src="/assets/js/Lightbox-Gallery.js"></script><script src="/assets/js/ml-video.js"></script><script src="/assets/js/Skill-skill.js"></script><script src="/assets/js/Skill-wow.js"></script><script src="/assets/js/Video-Parallax-Background-v2-multiple-parallax.js"></script><script src="/assets/js/WOWSlider-about-us.js"></script></body></html>
