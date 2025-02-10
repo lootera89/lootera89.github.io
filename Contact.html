@@ -11,7 +11,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Navbar</title>
-    <!-- Import Pompiere Font -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
 
@@ -19,97 +18,92 @@
             margin: 0;
             padding: 0;
             background-color: rgb(20, 20, 20);
-            font-family: Arial, sans-serif; /* Default font for the rest of the page */
+            font-family: Arial, sans-serif;
         }
 
-        /* Apply Pompiere font only to the navbar */
-        .navbar {
-            font-family: 'Pompiere', cursive;
-            background-color: rgb(20, 20, 20);
-            padding: 10px 20px;
-            position: relative;
-            overflow: visible;
+        #mainNav {
+            font-family: 'Pompiere', cursive !important;
+            background-color: rgb(20, 20, 20) !important;
+            padding: 10px 20px !important;
+            position: relative !important;
+            overflow: visible !important;
         }
 
-        .navbar-dark .navbar-nav {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            width: 100%;
+        #mainNav .navbar-nav {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: flex-end !important;
+            width: 100% !important;
         }
 
-        .navbar-dark .navbar-nav .nav-link {
-            color: #ffffff !important; /* Light bone color for text */
-            margin: 0 15px;
-            font-size: 1.7em;
-            font-weight: normal; /* Ensure normal font weight */
+        #mainNav .nav-link {
+            color: #ffffff !important;
+            margin: 0 15px !important;
+            font-size: 1.7em !important;
+            font-weight: normal !important;
         }
 
-        .navbar-dark .navbar-nav .nav-link:hover,
-        .navbar-dark .navbar-nav .nav-link:focus {
-            color: #6d6d6d !important; /* Darker bone color for hover */
+        #mainNav .nav-link:hover,
+        #mainNav .nav-link:focus {
+            color: #6d6d6d !important;
         }
 
-        .navbar-dark .navbar-nav .nav-link.active {
-            color: #6d6d6d !important; /* Darker bone color for active link */
-            font-weight: normal !important; /* Ensure active link is not bold */
+        #mainNav .nav-link.active {
+            color: #6d6d6d !important;
+            font-weight: normal !important;
         }
 
-        .navbar-toggler {
-            border-color: #ffffff!important; /* Light bone color for toggle button */
-            padding: 0.25rem 0.5rem; /* Smaller button */
-        }
-      
-        .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    width: 1.2em; /* Smaller icon */
-    height: 1.2em;
-}
-
-
-        .navbar-collapse {
-            justify-content: flex-end;
+        #mainNav .navbar-toggler {
+            border-color: #ffffff !important;
+            padding: 0.25rem 0.5rem !important;
         }
 
-        .navbar-nav {
-            margin-left: auto;
-            margin-right: 20%; /* Offset for the nav menu text */
+        #mainNav .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+            width: 1.2em !important;
+            height: 1.2em !important;
+        }
+
+        #mainNav .navbar-collapse {
+            justify-content: flex-end !important;
+        }
+
+        #mainNav .navbar-nav {
+            margin-left: auto !important;
+            margin-right: 20% !important;
         }
 
         @media (max-width: 1024px) {
-            .navbar-nav {
-                margin-right: 15%; /* Adjusted offset for tablet */
+            #mainNav .navbar-nav {
+                margin-right: 15% !important;
             }
 
-            .navbar-dark .navbar-nav .nav-link {
-                font-size: 1.5em; /* Smaller font size on tablet */
+            #mainNav .nav-link {
+                font-size: 1.5em !important;
             }
         }
 
         @media (max-width: 768px) {
-            .navbar-nav {
-                margin-right: 10%; /* Adjusted offset for mobile */
+            #mainNav .navbar-nav {
+                margin-right: 10% !important;
+                flex-direction: column !important;
+                align-items: flex-end !important;
             }
 
-            .navbar-dark .navbar-nav .nav-link {
-                font-size: 1.4em; /* Smaller font size on mobile */
+            #mainNav .nav-link {
+                font-size: 1.4em !important;
             }
 
-            .navbar-nav {
-                flex-direction: column; /* Stack items vertically */
-                align-items: flex-end; /* Align items to the right */
+            #mainNav .navbar-collapse {
+                display: none !important;
             }
 
-            .navbar-collapse {
-                display: none; /* Hide the full menu */
+            #mainNav .navbar-toggler {
+                display: block !important;
             }
 
-            .navbar-toggler {
-                display: block; /* Show the toggle button */
-            }
-
-            .navbar-collapse.show {
-                display: flex; /* Show the menu when toggled */
+            #mainNav .navbar-collapse.show {
+                display: flex !important;
             }
         }
     </style>
@@ -123,7 +117,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Projects.html"> Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="/Resume.html">Résumé</a></li>
                     <li class="nav-item"><a class="nav-link" href="/Contact.html">Contact</a></li>
                 </ul>
@@ -131,30 +125,20 @@
         </div>
     </nav>
     
-    <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <!-- JavaScript to handle active link -->
     <script>
-        // Get the current page URL
         const currentPageUrl = window.location.href;
-
-        // Select all navbar links
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-        // Loop through each link
-        navLinks.forEach(link => {
-            // Check if the link's href matches the current page URL
+        document.querySelectorAll('#mainNav .nav-link').forEach(link => {
             if (link.href === currentPageUrl) {
-                // Add the 'active' class to the matching link
                 link.classList.add('active');
             }
         });
     </script>
 </body>
-</html><section class="py-5"><div class="container py-5"><div class="row mb-5"><div class="col-md-8 col-xl-6 text-center mx-auto"><p class="lead fw-bold text-success mb-2" style="font-size: 30px;color: rgb(25, 245, 170);font-family: basis33;margin-bottom: 0px;">CONTACT ME</p><h2 class="display-1" style="font-family: 'Edit Undo BRK';font-size: 40px;">How you can contact me!</h2></div></div><div class="row d-flex justify-content-center"><div class="col-md-4 col-xl-4 d-flex justify-content-center justify-content-xl-start"><div class="d-flex flex-wrap flex-md-column justify-content-md-start align-items-md-start h-100"><div class="d-flex align-items-center p-3"><div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md" style="background: rgb(236,240,255);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-telephone" style="color: rgb(0,0,0);">
+</html>
+<section class="py-5"><div class="container py-5"><div class="row mb-5"><div class="col-md-8 col-xl-6 text-center mx-auto"><p class="lead fw-bold text-success mb-2" style="font-size: 30px;color: rgb(25, 245, 170);font-family: basis33;margin-bottom: 0px;">CONTACT ME</p><h2 class="display-1" style="font-family: 'Edit Undo BRK';font-size: 40px;">How you can contact me!</h2></div></div><div class="row d-flex justify-content-center"><div class="col-md-4 col-xl-4 d-flex justify-content-center justify-content-xl-start"><div class="d-flex flex-wrap flex-md-column justify-content-md-start align-items-md-start h-100"><div class="d-flex align-items-center p-3"><div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md" style="background: rgb(236,240,255);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-telephone" style="color: rgb(0,0,0);">
   <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
 </svg></div><div class="px-2"><h6 class="fw-bold mb-0" style="font-family: Inter, sans-serif;">Phone</h6><p class="text-muted mb-0" style="color: #40b59e;">+918839121205</p></div></div><div class="d-flex align-items-center p-3"><div class="bs-icon-md bs-icon-circle bs-icon-primary shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md" style="background: rgb(236,240,255);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-envelope" style="color: rgb(0,0,0);">
   <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"></path>
