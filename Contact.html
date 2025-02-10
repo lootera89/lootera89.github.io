@@ -19,98 +19,81 @@
             padding: 0;
             background-color: rgb(20, 20, 20);
             font-family: Arial, sans-serif;
+            overflow-y: scroll;
         }
 
         #mainNav {
-            font-family: 'Pompiere', cursive !important;
-            background-color: rgb(20, 20, 20) !important;
-            padding: 10px 20px !important;
-            position: relative !important;
-            overflow: visible !important;
+            font-family: 'Pompiere', cursive;
+            background-color: rgb(20, 20, 20);
+            padding: 10px 20px;
+            position: relative;
+            overflow: visible;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
         }
 
         #mainNav .navbar-nav {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: flex-end !important;
-            width: 100% !important;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
         }
 
         #mainNav .nav-link {
-            color: #ffffff !important;
-            margin: 0 15px !important;
-            font-size: 1.7em !important;
-            font-weight: normal !important;
+            color: #ffffff;
+            margin: 0 15px;
+            font-size: 1.7em;
+            font-weight: normal;
         }
 
         #mainNav .nav-link:hover,
         #mainNav .nav-link:focus {
-            color: #6d6d6d !important;
+            color: #6d6d6d;
         }
 
         #mainNav .nav-link.active {
-            color: #6d6d6d !important;
-            font-weight: normal !important;
+            color: #6d6d6d;
+            font-weight: normal;
         }
 
         #mainNav .navbar-toggler {
-            border-color: #ffffff !important;
-            padding: 0.25rem 0.5rem !important;
+            border-color: #ffffff;
+            padding: 0.25rem 0.5rem;
         }
 
         #mainNav .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
-            width: 1.2em !important;
-            height: 1.2em !important;
-        }
-
-        #mainNav .navbar-collapse {
-            justify-content: flex-end !important;
-        }
-
-        #mainNav .navbar-nav {
-            margin-left: auto !important;
-            margin-right: 20% !important;
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+            width: 1.2em;
+            height: 1.2em;
         }
 
         @media (max-width: 1024px) {
-            #mainNav .navbar-nav {
-                margin-right: 15% !important;
-            }
-
             #mainNav .nav-link {
-                font-size: 1.5em !important;
+                font-size: 1.5em;
             }
         }
 
         @media (max-width: 768px) {
-            #mainNav .navbar-nav {
-                margin-right: 10% !important;
-                flex-direction: column !important;
-                align-items: flex-end !important;
-            }
-
             #mainNav .nav-link {
-                font-size: 1.4em !important;
+                font-size: 1.4em;
             }
 
-            #mainNav .navbar-collapse {
-                display: none !important;
-            }
-
-            #mainNav .navbar-toggler {
-                display: block !important;
-            }
-
-            #mainNav .navbar-collapse.show {
-                display: flex !important;
+            #mainNav .navbar-nav {
+                flex-direction: column;
+                align-items: flex-end;
             }
         }
     </style>
 </head>
 <body>
     <nav id="mainNav" class="navbar navbar-dark navbar-expand-md sticky-top">
-        <div class="container-fluid">
+        <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
