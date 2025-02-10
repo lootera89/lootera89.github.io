@@ -1,5 +1,6 @@
 .filtr-item {
   padding-top: 30px;
+  max-width: 10%;
 }
 
 .filtr-controls span {

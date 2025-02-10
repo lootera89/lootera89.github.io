@@ -110,3 +110,43 @@ a {
   text-decoration: none;
 }
 
+@media (max-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 905px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .py-xl-5 {
+    margin-top: -50px!important;
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+  }
+}
+
+.p-4 {
+  padding: 0.5rem !important;
+  max-width: 90%;
+}
+
+@media (max-width: 1086px) {
+  .did {
+    max-height: 704px!important;
+    margin-bottom: -33px;
+    width: 635px!important;
+  }
+}
+
+@media (max-width: 450px) {
+  .did {
+    max-height: 353px!important;
+    margin-bottom: -33px;
+  }
+}
+
