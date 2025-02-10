@@ -207,34 +207,26 @@ body.loaded::before {
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
 
-    body {
+    .resume-wrapper {
       font-family: 'Arial', sans-serif;
       color: white;
-      background-color: #333;
-      margin: 0;
-      overflow-y: scroll; /* Prevent page shift due to scrollbar */
-    }
-
-    .content-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
+      background-color: #33333300;
       padding: 20px;
+      overflow-y: auto;
     }
 
-    #mainNav {
+    .resume-wrapper #mainNav {
       font-family: 'Pompiere', cursive;
       background-color: rgb(20, 20, 20);
       padding: 10px 20px;
-      position: relative;
-      overflow: visible;
-      height: 80px; /* Fixed height for consistency */
+      height: 80px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       box-sizing: border-box;
     }
 
-    #mainNav .navbar-nav {
+    .resume-wrapper #mainNav .navbar-nav {
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -244,7 +236,7 @@ body.loaded::before {
       list-style: none;
     }
 
-    #mainNav .nav-link {
+    .resume-wrapper #mainNav .nav-link {
       color: #ffffff;
       margin: 0 15px;
       font-size: 1.7em;
@@ -252,59 +244,60 @@ body.loaded::before {
       line-height: 1.5em;
     }
 
-    #mainNav .nav-link:hover,
-    #mainNav .nav-link:focus {
+    .resume-wrapper #mainNav .nav-link:hover,
+    .resume-wrapper #mainNav .nav-link:focus,
+    .resume-wrapper #mainNav .nav-link.active {
       color: #6d6d6d;
     }
 
-    #mainNav .nav-link.active {
-      color: #6d6d6d;
-    }
-
-    h1, h4, .job-title {
+    .resume-wrapper h1, 
+    .resume-wrapper h4, 
+    .resume-wrapper .job-title {
       font-weight: bold;
     }
 
-    h4 {
+    .resume-wrapper h4 {
       color: rgb(141, 134, 190);
       margin-bottom: 0.5em;
     }
 
-    p, ul li {
+    .resume-wrapper p, 
+    .resume-wrapper ul li {
       font-weight: normal;
       font-size: 1em;
     }
 
-    .section-line {
+    .resume-wrapper .section-line {
       border-bottom: 2px solid rgb(141, 134, 190);
       margin-bottom: 1em;
     }
 
-    .section-content {
+    .resume-wrapper .section-content {
       margin-bottom: 1.5em;
     }
 
-    .job-title {
+    .resume-wrapper .job-title {
       margin-bottom: 0.5em;
     }
 
-    ul {
+    .resume-wrapper ul {
       margin-top: 0.5em;
+    }
+
+    .resume-wrapper a {
+      color: rgb(141, 134, 190);
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
-
-  <!-- Content -->
-  <div class="content-wrapper">
-    <p><strong>Download:</strong> <a href="https://drive.google.com/file/d/1XHG9Dz2PaB8EtzIGVMUT4xemGCevO6ue/view?usp=sharing" style="color: rgb(141, 134, 190);text-decoration: underline;">PDF</a></p><p></p>
+  <div class="resume-wrapper">
+    <p><strong>Download:</strong> <a href="https://drive.google.com/file/d/1XHG9Dz2PaB8EtzIGVMUT4xemGCevO6ue/view?usp=sharing">PDF</a></p>
     <h3>Kushagra Sharma</h3>
     <p><strong>Video Game Programmer</strong></p>
     <p><strong>Phone:</strong> +918839121205</p>
     <p><strong>Email:</strong> maans2620@gmail.com</p>
     <p><strong>Address:</strong> Airport Road, Bhopal, MP</p>
-    <p><strong>Portfolio:</strong> <a href="https://lootera89.github.io" style="color: rgb(141, 134, 190);text-decoration: underline;">lootera89.github.io</a></p>
   
     <h4>Employment History</h4>
     <div class="section-line"></div>
@@ -369,5 +362,7 @@ body.loaded::before {
         <li>Fistful Of Gore (PC/Android 2024)</li>
       </ul>
     </div>
-  </body>
-  </html></div></section><footer class="text-center py-4"><div class="container"><div class="row row-cols-1 row-cols-lg-3"><div class="col"><p class="text-muted my-2">Copyright&nbsp;© 2024 Maan Sharma</p></div></div></div></footer><script src="/assets/bootstrap/js/bootstrap.min.js"></script><script src="/assets/js/bs-init.js"></script><script src="/assets/js/-Filterable-Cards--Filterable-Cards.js"></script><script src="/assets/js/bold-and-dark.js"></script><script src="/assets/js/Lightbox-Gallery-baguetteBox.min.js"></script><script src="/assets/js/Lightbox-Gallery.js"></script><script src="/assets/js/ml-video.js"></script><script src="/assets/js/Skill-skill.js"></script><script src="/assets/js/Skill-wow.js"></script><script src="/assets/js/Video-Parallax-Background-v2-multiple-parallax.js"></script><script src="/assets/js/WOWSlider-about-us.js"></script></body></html>
+  </div>
+</body>
+</html>
+</div></section><footer class="text-center py-4"><div class="container"><div class="row row-cols-1 row-cols-lg-3"><div class="col"><p class="text-muted my-2">Copyright&nbsp;© 2024 Maan Sharma</p></div></div></div></footer><script src="/assets/bootstrap/js/bootstrap.min.js"></script><script src="/assets/js/bs-init.js"></script><script src="/assets/js/-Filterable-Cards--Filterable-Cards.js"></script><script src="/assets/js/bold-and-dark.js"></script><script src="/assets/js/Lightbox-Gallery-baguetteBox.min.js"></script><script src="/assets/js/Lightbox-Gallery.js"></script><script src="/assets/js/ml-video.js"></script><script src="/assets/js/Skill-skill.js"></script><script src="/assets/js/Skill-wow.js"></script><script src="/assets/js/Video-Parallax-Background-v2-multiple-parallax.js"></script><script src="/assets/js/WOWSlider-about-us.js"></script></body></html>
