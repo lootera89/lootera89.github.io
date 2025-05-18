@@ -46,36 +46,7 @@ body.loaded::before {
             padding: 0;
             background-color: rgb(20, 20, 20);
             font-family: Arial, sans-serif;
-            overflow: hidden; /* Prevent scrolling during loading */
-        }
-
-        #loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgb(20, 20, 20);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 1;
-            transition: opacity 0.5s ease-out;
-        }
-
-        .loader {
-            border: 8px solid rgba(255, 255, 255, 0.2);
-            border-top: 8px solid #ffffff;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            overflow-y: scroll;
         }
 
         #mainNav {
@@ -86,8 +57,6 @@ body.loaded::before {
             overflow: visible;
             box-sizing: border-box;
             width: 100%;
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.5s ease-in;
         }
 
         .container {
@@ -199,48 +168,10 @@ body.loaded::before {
                 0 0 0.5px rgba(255, 255, 255, 0.05);
             transition: background 0.5s ease, backdrop-filter 0.5s ease;
         }
-
-        /* Webkit Browsers: Chrome, Edge, Safari */
-        ::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #121212; /* Slightly lighter for contrast */
-            border-radius: 8px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #2a2a2a, #1a1a1a);
-            border-radius: 8px;
-            border: 2px solid #121212; /* Matches track for seamless inset */
-            transition: background 0.3s ease, border 0.3s ease;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #3a3a3a, #2a2a2a);
-            border: 2px solid #2a2a2a;
-        }
-
-        /* Firefox */
-        * {
-            scrollbar-width: thin;
-            scrollbar-color: #2a2a2a #121212; /* Thumb / Track */
-        }
-
-        /* Optional smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
     </style>
 </head>
 
 <body>
-    <div id="loading-overlay">
-        <div class="loader"></div>
-    </div>
-
     <nav id="mainNav" class="navbar navbar-dark navbar-expand-md sticky-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -262,33 +193,51 @@ body.loaded::before {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const loadingOverlay = document.getElementById('loading-overlay');
-            const mainNav = document.getElementById('mainNav');
-
-            // Simulate loading time (replace with actual backend loading if needed)
-            setTimeout(() => {
-                loadingOverlay.style.opacity = '0';
-                mainNav.style.opacity = '1';
-                document.body.style.overflowY = 'auto'; // Enable scrolling after loading
-
-                // Remove the loading overlay from the DOM after it fades out
-                setTimeout(() => {
-                    loadingOverlay.style.display = 'none';
-                }, 500); // Match the fade-out transition duration
-
-                const currentPageUrl = window.location.href;
-                document.querySelectorAll('#mainNav .nav-link').forEach(link => {
-                    if (link.href === currentPageUrl) {
-                        link.classList.add('active');
-                    }
-                });
-            }, 1500); // Adjust the loading time as needed
+        const currentPageUrl = window.location.href;
+        document.querySelectorAll('#mainNav .nav-link').forEach(link => {
+            if (link.href === currentPageUrl) {
+                link.classList.add('active');
+            }
         });
     </script>
 </body>
 
-</html><!DOCTYPE html>
+<style>
+/* Webkit Browsers: Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121212; /* Slightly lighter for contrast */
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #2a2a2a, #1a1a1a);
+    border-radius: 8px;
+    border: 2px solid #121212; /* Matches track for seamless inset */
+    transition: background 0.3s ease, border 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #3a3a3a, #2a2a2a);
+    border: 2px solid #2a2a2a;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #2a2a2a #121212; /* Thumb / Track */
+}
+
+/* Optional smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+</style>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
