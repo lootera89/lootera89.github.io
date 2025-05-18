@@ -48,3 +48,9 @@
   border-radius: 30px;
 }
 
+::selection {
+  color: #000000;
+  background: #000000!important;
+  text-shadow: none;
+}
+
