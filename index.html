@@ -5,8 +5,9 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
-</head><body style="font-weight: bold;background: url(&quot;/assets/img/35589.jpg&quot;);"><!DOCTYPE html>
+</head><body style="font-weight: bold;background: url(&quot;/assets/img/brands/stars-964022_1920.png&quot;);"><!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -89,12 +90,66 @@
                 align-items: flex-end;
             }
         }
+
+        /* Animated underline + fade-in effect */
+        @keyframes fadeSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-4px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #mainNav .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+            animation: fadeSlideIn 0.8s ease forwards;
+        }
+
+        #mainNav .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 6px;
+            width: 0%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.432);
+            transition: width 0.3s ease;
+        }
+
+        #mainNav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        #mainNav .nav-link.active::after {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* ✨ Enhanced glass + bevel blur for professional UI portfolio look */
+        #mainNav {
+            background: linear-gradient(to right, rgba(30, 30, 30, 0.6), rgba(10, 10, 10, 0.4));
+            backdrop-filter: blur(24px) saturate(160%) contrast(120%);
+            -webkit-backdrop-filter: blur(24px) saturate(160%) contrast(120%);
+            border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+            box-shadow:
+                inset 0 1px 2px rgba(255, 255, 255, 0.05),
+                0 8px 32px rgba(0, 0, 0, 0.65),
+                0 0 0.5px rgba(255, 255, 255, 0.05);
+            transition: background 0.5s ease, backdrop-filter 0.5s ease;
+        }
     </style>
 </head>
+
 <body>
     <nav id="mainNav" class="navbar navbar-dark navbar-expand-md sticky-top">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -107,7 +162,7 @@
             </div>
         </div>
     </nav>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -120,8 +175,9 @@
         });
     </script>
 </body>
+
 </html>
-<div class="text-center"><p class="fw-bold text-success mb-2 lead fw-bold text-success" style="font-size: 19px;margin-top: 50px;color: rgb(25, 245, 170);font-weight: 100!important;">GAME PROGRAMMER PORTFOLIO</p><h1 class="display-1" style="font-family: 'Edit Undo BRK';margin-bottom: -1px;margin-top: -13px;font-size: 40px;">Kushagra Sharma</h1><p style="font-family: basis33;font-weight: 100;margin-top: -13px;font-size: 23px;color: rgb(177,177,177);">a.k.a lootera89</p></div><div class="container py-4 py-xl-5" style="color: rgb(215,215,215);"><div class="row row-cols-2 row-cols-md-2 d-flex justify-content-center align-items-center" style="margin-top: -32px;"><div class="col did" style="height: 718.9px;width: 543px;max-width: 90%;"><img class="rounded flex-shrink-0 pulse animated w-100 h-100 fit-cover" data-bss-disabled-mobile="true" src="/assets/img/IMG_20231031_114935.jpg" width="636" height="432" style="border-radius: 10px!important;border: 3px solid rgb(71,71,71);"></div><div class="col d-flex flex-column flex-grow-1 justify-content-center p-4"><div class="text-center text-md-start d-flex flex-column align-items-center align-items-md-start mb-5"><div></div></div><img src="/assets/img/275005435_1150078419153475_4729537107496087065_n.jpg" style="border-radius: 10px;border: 3px solid rgb(71,71,71);margin-bottom: 20px;max-height: 100%!important;"><p class="fw-bold text-success mb-2" style="font-size: 19px;padding-bottom: 0px;border-color: rgb(25, 245, 170);border-top-color: rgb(25,;border-right-color: 245,;border-bottom-color: 170);border-left-color: 245,;">Note</p><p class="lead" style="color: rgb(255,255,255);">I'm Kushagra, I've been a gamer since I was 6. my passion for game
+<div class="text-center"><p class="fw-bold text-success mb-2 lead fw-bold text-success" style="font-size: 19px;margin-top: 50px;color: rgb(25, 245, 170);font-weight: 100!important;">GAME PROGRAMMER PORTFOLIO</p><h1 class="display-1" style="font-family: 'Edit Undo BRK';margin-bottom: -1px;margin-top: -13px;font-size: 40px;">Kushagra Sharma</h1><p style="font-family: basis33;font-weight: 100;margin-top: -13px;font-size: 23px;color: rgb(177,177,177);">a.k.a lootera89 / maan sharma</p></div><div class="container py-4 py-xl-5" style="color: rgb(215,215,215);"><div class="row row-cols-2 row-cols-md-2 d-flex justify-content-center align-items-center" style="margin-top: -32px;"><div class="col did" style="height: 718.9px;width: 543px;max-width: 90%;"><img class="rounded flex-shrink-0 pulse animated w-100 h-100 fit-cover" data-bss-disabled-mobile="true" src="/assets/img/IMG_20231031_114935.jpg" width="636" height="432" style="border-radius: 10px!important;border: 3px solid rgb(71,71,71);"></div><div class="col d-flex flex-column flex-grow-1 justify-content-center p-4"><div class="text-center text-md-start d-flex flex-column align-items-center align-items-md-start mb-5"><div></div></div><img src="/assets/img/275005435_1150078419153475_4729537107496087065_n.jpg" style="border-radius: 10px;border: 3px solid rgb(71,71,71);margin-bottom: 20px;max-height: 100%!important;"><p class="fw-bold text-success mb-2" style="font-size: 19px;padding-bottom: 0px;border-color: rgb(25, 245, 170);border-top-color: rgb(25,;border-right-color: 245,;border-bottom-color: 170);border-left-color: 245,;">Note</p><p class="lead" style="color: rgb(255,255,255);">I'm Kushagra, I've been a gamer since I was 6. my passion for game
     development began In 2017. I learned to program in C++ in 2021 and started developing games with Unreal
     Engine 4
     the following year. After that, I moved to Unreal Engine 5. I have also worked

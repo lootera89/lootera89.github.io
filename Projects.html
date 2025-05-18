@@ -33,6 +33,7 @@ body.loaded::before {
 
     <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -115,12 +116,66 @@ body.loaded::before {
                 align-items: flex-end;
             }
         }
+
+        /* Animated underline + fade-in effect */
+        @keyframes fadeSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-4px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #mainNav .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+            animation: fadeSlideIn 0.8s ease forwards;
+        }
+
+        #mainNav .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 6px;
+            width: 0%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.432);
+            transition: width 0.3s ease;
+        }
+
+        #mainNav .nav-link:hover::after {
+            width: 100%;
+        }
+
+        #mainNav .nav-link.active::after {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* ✨ Enhanced glass + bevel blur for professional UI portfolio look */
+        #mainNav {
+            background: linear-gradient(to right, rgba(30, 30, 30, 0.6), rgba(10, 10, 10, 0.4));
+            backdrop-filter: blur(24px) saturate(160%) contrast(120%);
+            -webkit-backdrop-filter: blur(24px) saturate(160%) contrast(120%);
+            border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+            box-shadow:
+                inset 0 1px 2px rgba(255, 255, 255, 0.05),
+                0 8px 32px rgba(0, 0, 0, 0.65),
+                0 0 0.5px rgba(255, 255, 255, 0.05);
+            transition: background 0.5s ease, backdrop-filter 0.5s ease;
+        }
     </style>
 </head>
+
 <body>
     <nav id="mainNav" class="navbar navbar-dark navbar-expand-md sticky-top">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -133,7 +188,7 @@ body.loaded::before {
             </div>
         </div>
     </nav>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -146,6 +201,7 @@ body.loaded::before {
         });
     </script>
 </body>
+
 </html>
 <!DOCTYPE html>
 <html lang="en">
