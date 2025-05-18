@@ -203,41 +203,43 @@ body.loaded::before {
 </body>
 
 <style>
-/* Webkit Browsers: Chrome, Edge, Safari */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
+    /* Webkit Browsers: Chrome, Edge, Safari */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
 
-::-webkit-scrollbar-track {
-    background: #121212; /* Slightly lighter for contrast */
-    border-radius: 8px;
-}
+    ::-webkit-scrollbar-track {
+        background: #121212;
+        /* Slightly lighter for contrast */
+        border-radius: 8px;
+    }
 
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #2a2a2a, #1a1a1a);
-    border-radius: 8px;
-    border: 2px solid #121212; /* Matches track for seamless inset */
-    transition: background 0.3s ease, border 0.3s ease;
-}
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #2a2a2a, #1a1a1a);
+        border-radius: 8px;
+        border: 2px solid #121212;
+        /* Matches track for seamless inset */
+        transition: background 0.3s ease, border 0.3s ease;
+    }
 
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #3a3a3a, #2a2a2a);
-    border: 2px solid #2a2a2a;
-}
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #3a3a3a, #2a2a2a);
+        border: 2px solid #2a2a2a;
+    }
 
-/* Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #2a2a2a #121212; /* Thumb / Track */
-}
+    /* Firefox */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #2a2a2a #121212;
+        /* Thumb / Track */
+    }
 
-/* Optional smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-</style>
-<!DOCTYPE html>
+    /* Optional smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+</style><!DOCTYPE html>
 <html lang="en">
 
 <head>
